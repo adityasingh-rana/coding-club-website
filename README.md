@@ -1,4 +1,4 @@
-# PRAGYAAN Club Website
+# Coding Club Website
 
 Frontend web application for PRAGYAAN (CSE Coding Club).
 
