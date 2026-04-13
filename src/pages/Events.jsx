@@ -99,7 +99,7 @@ transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0
               onClick={() => navigate('/events/1')}
               >
                 <img
-                  src={event.image}
+                  src='/websprint.png'
                   alt={event.title}
                   className="h-40 w-full object-cover rounded-lg mb-4 group-hover:translate-x-1 duration-300"
                 />
