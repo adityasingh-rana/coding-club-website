@@ -20,7 +20,7 @@ function Home() {
         ></div>
 
         {/*overlay layer*/}
-        <div className='absolute inset-0 bg-linear-to-b from-black/70 via-black/90 to-primary/10'></div>
+        <div className='absolute inset-0 bg-linear-to-b from-black/80 via-black/90 to-primary/10'></div>
 
 
 
@@ -67,7 +67,7 @@ function Home() {
             </button>
           </div>
         </div>
-      </section>
+        </section>
     </>
   )
 }

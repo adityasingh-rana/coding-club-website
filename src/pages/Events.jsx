@@ -7,7 +7,7 @@ import GridAnimation from '../components/GridAnimation';
 function Events() {
   const navigate = useNavigate();
   return (
-    <div className='bg-linear-to-b from-black/70 via-black/75 to-black/70'>
+    <div className='bg-linear-to-b from-black/90 via-black/85 to-background/90'>
       <GridAnimation />
       <section className="py-20">
         <div className="animate-[fadeIn_1s_ease-in-out]container mx-auto px-6 text-center z-10">
@@ -23,7 +23,8 @@ function Events() {
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto ">
             {/* Card 1 */}
             <div className="animate-[fadeIn_0.8s_ease-in-out] p-6 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 hover:-translate-y-3 hover:scale-[1.02]
-transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0.2)] z-10">
+transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0.2)] z-10"
+>
 
               <div className='flex justify-center'>
                 <Calendar className="w-8 h-8 mb-4 text-primary " />
@@ -76,7 +77,7 @@ transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0
       </section>
 
 
-      <section className="py-24 ">
+      <section className="events-sec py-24 ">
         <div className="container mx-auto px-6">
 
           <div className="text-center mb-12">
@@ -95,11 +96,12 @@ transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0
               <div
                 key={event.id}
                 className="group p-6 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 hover:-translate-y-2 transition-all duration-300 hover:shadow-[0_0_30px_rgba(32,178,166,0.2)] cursor-pointer z-10"
+              onClick={() => navigate('/events/1')}
               >
                 <img
                   src={event.image}
                   alt={event.title}
-                  className="h-40 w-full object-cover rounded-lg mb-4"
+                  className="h-40 w-full object-cover rounded-lg mb-4 group-hover:translate-x-1 duration-300"
                 />
 
                 <p className="text-sm text-muted-foreground mb-2">
@@ -118,7 +120,7 @@ transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0
                   {event.shortDescription}
                 </p>
 
-                <button className="mt-5 text-primary transition-all duration-300 group-hover:translate-x-1">
+                <button className="mt-5 text-primary transition-all duration-300 group-hover:translate-x-1 cursor-pointer hover:underline" >
                   View Details →
                 </button>
               </div>

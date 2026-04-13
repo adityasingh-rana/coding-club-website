@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 function Navbar() {
 
   return (
-    <header className='fixed top-0 left-0 right-0 bg-transparent py-5 z-50'>
+    <header className='animate-[fadeIn_1s_ease-in-out] fixed top-0 left-0 right-0 bg-transparent py-5 z-50 '>
 
-      <nav className='container mx-auto px-6 flex items-center justify-between'>
+      <nav className='container ml-15  flex items-center justify-between'>
         <div className='tittle'>
           <Link to = "/" className='text-xl font-bold tracking-tight hover:text-primary'>
           IET STUDENT COMMUNITY
