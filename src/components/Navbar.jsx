@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 function Navbar() {
+
   return (
     <header className='fixed top-0 left-0 right-0 bg-transparent py-5 z-50'>
 
@@ -13,7 +14,8 @@ function Navbar() {
         </div>
         <div className='flex gap-1 items-center'>
           <div className="links glass rounded-full px-2 py-1 flex items-center gap-1">
-            <Link to='/' className='px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full hover:bg-surface'>
+            <Link to='/' className='px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full hover:bg-surface'
+            >
               Home
             </Link>
             <Link to='/events' className='px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full hover:bg-surface'>
