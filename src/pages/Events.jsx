@@ -24,7 +24,7 @@ function Events() {
             {/* Card 1 */}
             <div className="animate-[fadeIn_0.8s_ease-in-out] p-6 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 hover:-translate-y-3 hover:scale-[1.02]
 transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0.2)] z-10"
->
+            >
 
               <div className='flex justify-center'>
                 <Calendar className="w-8 h-8 mb-4 text-primary " />
@@ -82,51 +82,78 @@ transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0
 
           <div className="text-center mb-12">
             <h2 className="animate-[fadeIn_1s_ease-in-out] text-4xl font-bold">
-              Upcoming <span className="text-primary">Events</span>
+              All <span className="text-primary">Events</span>
             </h2>
             <p className="animate-[fadeIn_1s_ease-in-out] text-muted-foreground mt-2">
               Join exciting events and level up your skills
             </p>
           </div>
 
-          <div className="grid md:grid-cols-1 max-w-xl mx-auto gap-8 animate-[fadeIn_1s_ease-in-out]">
-
+          <div className={`grid  mx-auto gap-8 animate-[fadeIn_1s_ease-in-out] justify-center ${events.length === 1
+            ? "grid-cols-1 max-w-68"
+            : events.length === 2
+              ? "grid-cols-2 max-w-145"
+              : "md:grid-cols-3 max-w-220"
+            }
+  }`}>
             {/* Event Card */}
             {events.map((event) => (
-              <div
-                key={event.id}
-                className="group p-6 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 hover:-translate-y-2 transition-all duration-300 hover:shadow-[0_0_30px_rgba(32,178,166,0.2)] cursor-pointer z-10"
-              onClick={() => navigate('/events/1')}
-              >
+
+              <div className="relative group rounded-2xl overflow-hidden border border-white/10 hover:border-primary/40 h-96 hover:-translate-y-2 transition-all duration-300 hover:shadow-[0_0_30px_rgba(32,178,166,0.2)] cursor-pointer z-10 flex items-center justify-center">
+
+                {/* Background Image */}
                 <img
+                  src="/images/cardBg.png"
+                  alt="bg"
+                  className="absolute inset-0 w-full h-full object-contain opacity-40 group-hover:opacity-60 transition duration-300"
+                />
+
+                <div
+                  key={event.id}
+                  className="group p-6 rounded-xl z-10 w-50 h-70"
+                  onClick={() => navigate(`/events/${event.id}`)}
+                >
+                  {/* <img
                   src='/websprint.png'
                   alt={event.title}
                   className="h-40 w-full object-cover rounded-lg mb-4 group-hover:translate-x-1 duration-300"
-                />
+                /> */}
 
-                <p className="text-sm text-muted-foreground mb-2">
-                  📅 {event.date}
-                </p>
+                  <p className="text-sm text-muted-foreground mb-2">
+                    📅 {event.date}
+                  </p>
 
-                <h3 className="text-xl font-semibold mb-3">
-                  {event.title}
-                </h3>
+                  <h3 className="text-white text-xl font-semibold mb-3">
+                    {event.title}
+                  </h3>
 
-                <span className="text-xs px-3 py-1 rounded-full bg-purple-500/20 text-purple-400">
-                  {event.type}
-                </span>
+                  <span className="text-xs px-3 py-1 rounded-full bg-purple-500/20 text-purple-400">
+                    {event.type}
+                  </span>&nbsp;
+                  <span className="text-xs px-3 py-1 rounded-full bg-green-500/20 text-green-400">
+                    <span class="relative inline-flex size-3">
+                      <span class="absolute inline-flex h-2 w-2 animate-ping rounded-full bg-green-400 opacity-75"></span>
+                      <span class="relative inline-flex size-2 rounded-full bg-green-500"></span>
+                    </span>
+                      <span className='ml-0.5'>
+                        {event.status}
+                      </span>
+                  </span>
 
-                <p className="text-muted-foreground mt-3">
-                  {event.shortDescription}
-                </p>
+                      <p className="text-muted-foreground mt-3">
+                        {event.shortDescription}
+                      </p>
 
-                <button className="mt-5 text-primary transition-all duration-300 group-hover:translate-x-1 cursor-pointer hover:underline" >
-                  View Details →
-                </button>
-              </div>
+                      <button className="mt-5 text-primary transition-all duration-300 group-hover:translate-x-1 cursor-pointer hover:underline" >
+                        View Details →
+                      </button>
+                    </div>
+                </div>
+
             ))}
+              </div>
 
-          </div>
+
 
         </div>
       </section>

@@ -7,27 +7,33 @@ import Home from './pages/Home.jsx'
 import Events from './pages/Events.jsx'
 import Members from './pages/Members.jsx'
 import Contact from './pages/Contact.jsx'
+import EventDetails from "./pages/EventDetails";
 
 const router = createBrowserRouter([
   {
     path: "",
-    element: <App/>,
+    element: <App />,
     children: [
       {
         path: "/",
-        element: <Home/>
+        element: <Home />
       },
       {
         path: "/events",
-        element: <Events/>
+        element: <Events />
       },
       {
         path: "/members",
-        element: <Members/>
+        element: <Members />
       },
       {
         path: "/contact",
-        element: <Contact/>
+        element: <Contact />
+
+      },
+      {
+        path: "/events/:id",
+        element: <EventDetails />
       }
     ]
   },
@@ -35,6 +41,6 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   </StrictMode>,
 )

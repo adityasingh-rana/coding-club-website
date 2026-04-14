@@ -3,6 +3,7 @@ export const events = [
     id: 1,
     title: "WebSprint 2026",
     type: "Hackathon",
+    status: "live",
     date: "18 April 2026",
     shortDescription: "One day web development hackathon to build real-world solutions.",
     description:
@@ -12,4 +13,5 @@ export const events = [
     time: "10:00 AM onwards",
     image: "/websprint.png", // add later
   },
+
 ];
