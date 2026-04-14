@@ -82,7 +82,7 @@ transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0
 
           <div className="text-center mb-12">
             <h2 className="animate-[fadeIn_1s_ease-in-out] text-4xl font-bold">
-              All <span className="text-primary">Events</span>
+              Upcoming <span className="text-primary">Events</span>
             </h2>
             <p className="animate-[fadeIn_1s_ease-in-out] text-muted-foreground mt-2">
               Join exciting events and level up your skills
