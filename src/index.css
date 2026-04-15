@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 @theme {
   --color-background: #0f1418;
   --color-foreground: #f0f2f5;
@@ -6,6 +7,7 @@
   --color-card: #141a1f;
 
   --color-primary: #20b2a6;
+  --color-primary2: #29c694;
   --color-primary-foreground: #fff;
 
   --color-muted: #252e37;
@@ -31,9 +33,15 @@
 
 @layer components{
   .glass{
-    background-color: color-mix(in srgb, var(--color-surface) 50%, transparent);
+    background-color: color-mix(in srgb, var(--color-black) 50%, transparent);
     backdrop-filter: blur(16px);
     border: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
+  }
+
+   .glass-strong {
+    background-color: color-mix(in srgb, var(--color-surface) 80%, transparent);
+    backdrop-filter: blur(24px);
+    border: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
   }
 }
 

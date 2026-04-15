@@ -45,26 +45,34 @@ function Home() {
 
           <h2 className='mt-6 text-lg md:text-xl text-gray-400 max-w-xl'>Join a community of developers, explore events, and grow your skills at IET.</h2>
 
-          <div className='flex gap-5 justify-center'>
+          <div className='flex justify-center gap-5 mt-5'>
             <button
-              className="hover:scale-105 bg-primary text-white px-6
-              py-3 rounded-full shadow-lg shadow-primary/30
-              transition-all duration-300 hover:bg-highlight
-            hover:text-background"
+              className="
+                hover:scale-105 border cursor-pointer
+                px-6 py-3 rounded-full animate-bounce hover:animate-none
+                shadow-lg shadow-primary/30
+                transition-all duration-300
+                text-white
+                bg-primary
+                border-primary
+                hover:bg-primary2
+
+              "
               onClick={() => Navigate('/events')}
             >
               Explore Events
             </button>
 
+            <a href="https://chat.whatsapp.com/BOBvRMpmMfX6592BVVoQvA">
             <button
-              className="border hover:border-primary border-border
+              className=" border border-primary cursor-pointer
              text-foreground px-6 py-3 rounded-full
               transition-all duration-300 hover:bg-surface
               hover:shadow-md hover:shadow-primary/20"
-              onClick={() => Navigate('/contact')}
             >
               Join Community
             </button>
+            </a>
           </div>
         </div>
         </section>

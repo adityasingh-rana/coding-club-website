@@ -30,6 +30,7 @@ export default function GridAnimation() {
         cnv.style("position", "fixed");
         cnv.style("inset", "0");
         cnv.style("z-index", "1");
+        cnv.style("pointer-events", "none");
 
         colorWithAlpha = p.color(COLOR_R, COLOR_G, COLOR_B);
         p.noFill();

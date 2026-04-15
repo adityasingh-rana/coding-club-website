@@ -5,17 +5,17 @@ function Footer() {
         {/* Icons */}
         <div className="flex justify-center gap-6 ">
 
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+          <a href="https://github.com/adityasingh-rana/coding-club-website" target="_blank" rel="noopener noreferrer"
             className="hover:text-primary transition duration-300">
             <i className="ri-github-line text-xl"></i>
           </a>
 
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+          <a href="https://www.linkedin.com/company/ietrmlau" target="_blank" rel="noopener noreferrer"
             className="hover:text-primary transition duration-300">
             <i className="ri-linkedin-box-line text-xl"></i>
           </a>
 
-          <a href="mailto:your@email.com"
+          <a href="mailto:adityasinghk099@gmail.com"
             className="hover:text-primary transition duration-300">
             <i className="ri-mail-line text-xl"></i>
           </a>
@@ -24,7 +24,7 @@ function Footer() {
 
         {/* Copyright */}
         <div>
-          © {new Date().getFullYear()} IET Student Community. All rights reserved.
+          © {new Date().getFullYear()} IET Students Community. All rights reserved.
       </div>
 
     </footer>
