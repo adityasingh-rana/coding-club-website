@@ -4,27 +4,34 @@ import { Link, useLocation } from 'react-router-dom';
 function Navbar() {
 
   const location = useLocation();
-  let [isScrolled,setIsScrolled] = useState();
+  let [isScrolled,setIsScrolled] = useState(false);
 
-  useEffect(()=>{
-    const handleScroll = () => {
-      if(window.scrollY > 30) setIsScrolled(true);
-      else setIsScrolled(false);
-    }
+  useEffect(() => {
+  const handleScroll = () => {
+    if (window.scrollY > 30) setIsScrolled(true);
+    else setIsScrolled(false);
+  };
 
-    window.addEventListener("scroll",handleScroll);
-  });
+  window.addEventListener("scroll", handleScroll);
+
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+}, []);
 
   return (
     <header className={`animate-[fadeIn_1s_ease-in-out] fixed top-0 left-0 right-0  z-50 ${
         isScrolled ? "glass py-3" : "bg-transparent py-5"
       }`}>
 
-      <nav className='container ml-15 flex items-center justify-between'
-      style={{width: "90%"}}>
+      <nav className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between">
         <div className='tittle'>
-          <Link to = "/" className='text-xl font-bold tracking-tight hover:text-primary'>
+          <Link to = "/" className='text-xl font-bold tracking-tight hover:text-primary flex justify-center items-center gap-2'>
+          <span>
+            <img src="/images/communityLogo.png" alt="CommunityLogo" className='h-8 w-8 rounded-xl'/>
+          </span><span>
           IET STUDENTS COMMUNITY
+          </span>
           </Link>
         </div>
         <div className='flex gap-1 items-center'>

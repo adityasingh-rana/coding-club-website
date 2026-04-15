@@ -12,7 +12,7 @@ function EventDetails() {
   }
 
   return (
-    <div className="bg-linear-to-b from-black/90 via-black/85 to-background/90">
+    <div className="bg-linear-to-b from-black/90 via-black/85 to-background/90 min-w-screen">
       <section className="pt-24 pb-24 px-6 max-w-5xl mx-auto ">
 
       <GridAnimation />
