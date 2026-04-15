@@ -12,14 +12,18 @@ function App() {
       <main className="flex-1">
         <Outlet />
       </main>
-      <a href="https://www.rmlau.ac.in/">
-      <img src="/images/rmlauLogo.png" alt="Rmalau Logo" className="
+      <div className="hidden md:block">
+        <a href="https://www.rmlau.ac.in/">
+        <img src="/images/rmlauLogo.png" alt="Rmalau Logo" className="
+        relative
+        md:fixed
         shadow-lg shadow-primary
-        fixed bottom-20 bg-transparent right-10 h-15 w-15 rounded-2xl hover:scale-110 transition-all duration-300 z-50
+        bottom-18 bg-transparent right-8 h-15 w-15 rounded-2xl hover:scale-110 transition-all duration-300 z-50
         " style={{
-          boxShadow: "3px 3px 10px #20b2a6"
-        }}/>
+            boxShadow: "3px 3px 10px #20b2a6"
+          }} />
       </a>
+      </div>
 
       <Footer />
 

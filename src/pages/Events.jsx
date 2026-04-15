@@ -8,9 +8,11 @@ function Events() {
   const navigate = useNavigate();
   return (
     <div className='bg-linear-to-b from-black/90 via-black/85 to-background/90'>
-      <GridAnimation />
-      <section className="py-20">
-        <div className="animate-[fadeIn_1s_ease-in-out]container mx-auto px-6 text-center z-10">
+       <div className="hidden md:block">
+          <GridAnimation />
+        </div>
+      <section className="py-30">
+        <div className="animate-[fadeIn_1s_ease-in-out] container mx-auto px-6 text-center z-10">
 
           <h2 className="animate-[fadeIn_1s_ease-in-out] text-4xl font-bold mb-4">
             What <span className="text-primary">We Offer</span>
@@ -88,18 +90,16 @@ transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0
               Join exciting events and level up your skills
             </p>
           </div>
-
-          <div className={`grid  mx-auto gap-8 animate-[fadeIn_1s_ease-in-out] justify-center ${events.length === 1
-            ? "grid-cols-1 max-w-68"
-            : events.length === 2
-              ? "grid-cols-2 max-w-145"
-              : "md:grid-cols-3 max-w-220"
-            }
-  }`}>
+          <div className={`
+          grid mx-auto gap-8 animate-[fadeIn_1s_ease-in-out] justify-center
+           ${events.length === 1 ? "grid-cols-1 max-w-68" :
+             events.length === 2 ? "grid-cols-1 sm:grid-cols-2 max-w-68 sm:max-w-145" :
+              "gird-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-68 sm:max-w-145 md:max-w-220" } }`
+        }>
             {/* Event Card */}
             {events.map((event) => (
 
-              <div className="relative group rounded-2xl overflow-hidden border border-white/10 hover:border-primary/40 h-96 hover:-translate-y-2 transition-all duration-300 hover:shadow-[0_0_30px_rgba(32,178,166,0.2)] cursor-pointer z-10 flex items-center justify-center">
+              <div  key={event.id} className="relative group rounded-2xl overflow-hidden border border-white/10 active:scale-300 hover:border-primary/40 h-96 hover:-translate-y-2 transition-all duration-300 hover:shadow-[0_0_30px_rgba(32,178,166,0.2)] cursor-pointer z-10 flex items-center justify-center ">
 
                 {/* Background Image */}
                 <img
@@ -109,15 +109,9 @@ transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0
                 />
 
                 <div
-                  key={event.id}
-                  className="group p-6 rounded-xl z-10 w-50 h-70"
+                  className="group p-6 ml-6 rounded-xl z-10 w-full max-w-sm h-auto"
                   onClick={() => navigate(`/events/${event.id}`)}
                 >
-                  {/* <img
-                  src='/websprint.png'
-                  alt={event.title}
-                  className="h-40 w-full object-cover rounded-lg mb-4 group-hover:translate-x-1 duration-300"
-                /> */}
 
                   <p className="text-sm text-muted-foreground mb-2">
                     📅 {event.date}
@@ -131,9 +125,9 @@ transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0
                     {event.type}
                   </span>&nbsp;
                   <span className="text-xs px-3 py-1 rounded-full bg-green-500/20 text-green-400">
-                    <span class="relative inline-flex size-3">
-                      <span class="absolute inline-flex h-2 w-2 animate-ping rounded-full bg-green-400 opacity-75"></span>
-                      <span class="relative inline-flex size-2 rounded-full bg-green-500"></span>
+                    <span className="relative inline-flex size-3">
+                      <span className="absolute inline-flex h-2 w-2 animate-ping rounded-full bg-green-400 opacity-75"></span>
+                      <span className="relative inline-flex size-2 rounded-full bg-green-500"></span>
                     </span>
                       <span className='ml-0.5'>
                         {event.status}

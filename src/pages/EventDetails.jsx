@@ -8,63 +8,68 @@ function EventDetails() {
   const event = events.find((e) => e.id === Number(id));
 
   if (!event) {
-    return <div>Event not found</div>;
+    return <div className="pt-24 text-center">Event not found</div>;
   }
 
   return (
-    <div className="bg-linear-to-b from-black/90 via-black/85 to-background/90 min-w-screen">
-      <section className="pt-24 pb-24 px-6 max-w-5xl mx-auto ">
-
-      <GridAnimation />
-      <h1 className="text-4xl font-bold mb-4 z-10 bg-linear-to-r from-primary to-highlight text-transparent bg-clip-text">
-        {event.title}
-      </h1>
-
-      <p className="text-muted-foreground mb-6 z-10">
-        {event.date} • {event.venue}
-      </p>
-      <div className="flex justify-between gap-10 ">
-
-        <img
-          src="/images/websprint1.png"
-          alt={event.title}
-          className="w-100 h-100 rounded-xl mb-6 z-10"
-        />
-
-        <div>
-          <h1 className="text-xl font-semibold mb-2">Description:</h1>
-          <p className="text-lg text-muted-foreground mb-8">
-            WebSprint 2026 is a one-day web development hackathon designed to challenge your creativity and technical skills.
-            Participants will work in teams to build innovative web-based solutions within a limited time frame.
-            This event is a great opportunity to collaborate, learn, and showcase your development skills.
-          </p>
-
-          <h2 className="text-lg font-semibold mb-2">Important Details:</h2>
-          <ul className="list-disc ml-5 text-muted-foreground mb-6 space-y-1">
-            <li><strong>Event Date:</strong> 18 April 2026</li>
-            <li><strong>Time:</strong> 10:00 AM onwards</li>
-            <li><strong>Venue:</strong> Central Computer Lab (IET)</li>
-            <li><strong>Registration Deadline:</strong> 17 April 2026</li>
-            <li><strong>Team Size:</strong> 3–4 members</li>
-            <li><strong>Mode:</strong> Offline</li>
-          </ul>
-
-          <h2 className="text-lg font-semibold mb-2">Contacts:</h2>
-          <ul className="list-disc ml-5 text-muted-foreground mb-6 space-y-1">
-            <li><strong>Phone:</strong> 9559155959</li>
-            <li><strong>Email:</strong> connect.csermlau@gmail.com</li>
-          </ul>
-
-          <a href="https://forms.gle/vbPLPBiuhjAqGGTo7">
-            <button className=" px-6 py-3 rounded-full text-white hover:bg-primary border border-primary transition z-10 cursor-pointer fixed bottom-15 right-5 animate-bounce">
-              Register Now
-            </button>
-          </a>
-
-
-        </div>
+    <div className="relative min-h-screen overflow-x-hidden bg-linear-to-b from-black/90 via-black/85 to-background/90 pb-10">
+      <div className="hidden md:block pointer-events-none">
+        <GridAnimation />
       </div>
-    </section>
+
+      <section className="relative z-10 mx-auto max-w-6xl px-4 pb-16 pt-24 sm:px-6">
+        <h1 className="mb-4 bg-linear-to-r from-primary to-highlight bg-clip-text text-2xl font-bold text-transparent sm:text-3xl md:text-4xl">
+          {event.title}
+        </h1>
+
+        <p className="mb-6 text-muted-foreground">
+          {event.date} • {event.venue}
+        </p>
+
+        <div className="flex flex-col items-center gap-8 md:flex-row md:items-start">
+          <img
+            src={event.image || "/images/websprint1.png"}
+            alt={event.title}
+            className="h-auto w-full rounded-xl object-cover md:w-1/2"
+          />
+
+          <div className="w-full md:w-1/2">
+            <h2 className="mb-2 text-lg font-semibold">Description:</h2>
+            <p className="mb-6 text-base text-muted-foreground sm:text-lg">
+              WebSprint 2026 is a one-day web development hackathon designed to
+              challenge your creativity and technical skills. Participants will
+              work in teams to build innovative web-based solutions within a
+              limited time frame. This event is a great opportunity to
+              collaborate, learn, and showcase your development skills.
+            </p>
+
+            <h2 className="mb-2 text-lg font-semibold">Important Details:</h2>
+            <ul className="mb-6 ml-5 list-disc space-y-1 text-muted-foreground">
+              <li><strong>Event Date:</strong> 18 April 2026</li>
+              <li><strong>Time:</strong> 10:00 AM onwards</li>
+              <li><strong>Venue:</strong> Central Computer Lab (IET)</li>
+              <li><strong>Registration Deadline:</strong> 17 April 2026</li>
+              <li><strong>Team Size:</strong> 3–4 members</li>
+              <li><strong>Mode:</strong> Offline</li>
+            </ul>
+
+            <h2 className="mb-2 text-lg font-semibold">Contacts:</h2>
+            <ul className="mb-6 ml-5 list-disc space-y-1 text-muted-foreground">
+              <li><strong>Phone:</strong> 9559155959</li>
+              <li><strong>Email:</strong> connect.csermlau@gmail.com</li>
+            </ul>
+
+            <a
+              href="https://forms.gle/vbPLPBiuhjAqGGTo7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block w-full rounded-full border border-primary bg-primary px-6 py-3 text-center text-white transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/30 active:scale-95 sm:w-auto animate-bounce"
+            >
+              Register Now
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

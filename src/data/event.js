@@ -11,7 +11,8 @@ export const events = [
     teamSize: "3-4 members",
     venue: "Central Computer Lab (IET)",
     time: "10:00 AM onwards",
-    image: "/websprint.png", // add later
+    image: "/images/websprint1.png", // add later
   },
+
 
 ];
