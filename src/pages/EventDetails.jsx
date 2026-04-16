@@ -33,7 +33,7 @@ function EventDetails() {
             className="h-auto w-full rounded-xl object-cover md:w-1/2"
           />
 
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-1/2 flex flex-col gap-5">
             <h2 className="mb-2 text-lg font-semibold">Description:</h2>
             <p className="mb-6 text-base text-muted-foreground sm:text-lg">
               WebSprint 2026 is a one-day web development hackathon designed to
@@ -58,12 +58,23 @@ function EventDetails() {
               <li><strong>Phone:</strong> 9559155959</li>
               <li><strong>Email:</strong> connect.csermlau@gmail.com</li>
             </ul>
+             <div>
+              <h2>Important Documents:</h2>
+              <div className="flex gap-2">
+                <p className="text-muted-foreground"> Problem Statements:</p>
+                <a href="/docs/WebsprintPS.pdf" className="text-blue-400 hover:underline"> Download Pdf</a>
+              </div>
+              <div className="flex gap-2">
+                <p className="text-muted-foreground"> RuleBook:</p>
+                <a href="/docs/WebSprint-2026_Final-Rulebook.pdf" className="text-blue-400 hover:underline"> Download Pdf</a>
+              </div>
+            </div>
 
             <a
               href="https://forms.gle/vbPLPBiuhjAqGGTo7"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block w-full rounded-full border border-primary bg-primary px-6 py-3 text-center text-white transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/30 active:scale-95 sm:w-auto animate-bounce"
+              className="inline-block w-full rounded-full border border-primary bg-primary px-6 py-3 text-center text-white transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/30 active:scale-95 sm:w-auto animate-bounce hover:animate-none"
             >
               Register Now
             </a>
