@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { events } from "../data/event";
 import GridAnimation from "../components/GridAnimation";
+import { Download } from "lucide-react";
 
 function EventDetails() {
   const { id } = useParams();
@@ -62,11 +63,15 @@ function EventDetails() {
               <h2>Important Documents:</h2>
               <div className="flex gap-2">
                 <p className="text-muted-foreground"> Problem Statements:</p>
-                <a href="/docs/WebsprintPS.pdf" className="text-blue-400 hover:underline"> Download Pdf</a>
+                <a href="/docs/WebsprintPS.pdf" className="text-blue-400 hover:underline">
+                 <Download size={20} className="hover:scale-115"/>
+                </a>
               </div>
               <div className="flex gap-2">
                 <p className="text-muted-foreground"> RuleBook:</p>
-                <a href="/docs/WebSprint-2026_Final-Rulebook.pdf" className="text-blue-400 hover:underline"> Download Pdf</a>
+                <a href="/docs/WebSprint-2026_Final-Rulebook.pdf" className="text-blue-400 hover:underline">
+                 <Download size={20} className="hover:scale-115" />
+                 </a>
               </div>
             </div>
 
