@@ -99,7 +99,8 @@ transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0
             {/* Event Card */}
             {events.map((event) => (
 
-              <div  key={event.id} className="relative group rounded-2xl overflow-hidden border border-white/10 active:scale-300 hover:border-primary/40 h-96 hover:-translate-y-2 transition-all duration-300 hover:shadow-[0_0_30px_rgba(32,178,166,0.2)] cursor-pointer z-10 flex items-center justify-center ">
+              <div  key={event.id} className="relative group rounded-2xl
+              shadow-[0_0_30px_rgba(32,178,166,0.2)] sm:shadow-none overflow-hidden border border-primary/40 sm:border-white/10 active:scale-300 hover:border-primary/40 h-96 hover:-translate-y-2 transition-all duration-300 hover:shadow-[0_0_30px_rgba(32,178,166,0.2)] cursor-pointer z-10 flex items-center justify-center ">
 
                 {/* Background Image */}
                 <img
