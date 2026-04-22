@@ -7,7 +7,7 @@ import GridAnimation from '../components/GridAnimation';
 function Events() {
   const navigate = useNavigate();
   return (
-    <div className='bg-linear-to-b from-black/90 via-black/85 to-background/90'>
+    <div className='bg-linear-to-b from-background/90 via-black/60 to-background/90'>
        <div className="hidden md:block">
           <GridAnimation />
         </div>

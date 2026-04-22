@@ -43,10 +43,10 @@ function Navbar() {
             <Link to='/events' className={`px-4 py-2 text-sm  rounded-full ${location.pathname === '/events' ? 'bg-surface text-foreground' : 'text-muted-foreground hover:text-foreground hover:bg-surface'} `}>
               Events
             </Link>
-            {/* <Link to='/members' className='px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full hover:bg-surface'>
+            <Link to='/members' className={`px-4 py-2 text-sm  rounded-full ${location.pathname === '/members' ? 'bg-surface text-foreground' : 'text-muted-foreground hover:text-foreground hover:bg-surface'} `}>
               Members
             </Link>
-            <Link to='/contact' className='px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full hover:bg-surface'>
+            {/* <Link to='/contact' className='px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full hover:bg-surface'>
               Contact
             </Link> */}
           </div>
@@ -62,25 +62,28 @@ function Navbar() {
       <div
         className={`md:hidden mt-6 mx-4 rounded-xl py-4 flex flex-col items-center justify-center gap-3
   transition-all duration-300 ease-in-out
-  ${ location.pathname === '/'? 'bg-linear-to-b from-primary/5 via-black/90 to-primary/10': 'bg-background/90'}
+  ${location.pathname === '/' ? 'bg-linear-to-b from-primary/5 via-black/90 to-primary/10' : 'bg-background/90'}
   ${menuOpen
             ? "opacity-100 translate-y-0 pointer-events-auto"
             : "opacity-0 -translate-y-4 pointer-events-none"
           }`}
       >
 
-    <Link to="/" onClick={() => setMenuOpen(false)} className='w-full flex justify-center active:bg-primary/10 rounded-2xl h-8 items-center transition-all duration-100 ease-in-out z-10 text-foreground active:scale-150'>
-      Home
-    </Link>
+        <Link to="/" onClick={() => setMenuOpen(false)} className='w-full flex justify-center active:bg-primary/10 rounded-2xl h-8 items-center transition-all duration-100 ease-in-out z-10 text-foreground active:scale-150'>
+          Home
+        </Link>
 
-    <Link to="/events" onClick={() => setMenuOpen(false)} className='w-full flex justify-center active:bg-primary/10 rounded-2xl h-8 items-center transition-all duration-100 ease-in-out z-10 text-foreground active:scale-150'>
-      Events
-    </Link>
-    <a href="https://www.rmlau.ac.in/">
-        <img src="/images/rmlauLogo.png" alt="Rmalau Logo" className="
+        <Link to="/events" onClick={() => setMenuOpen(false)} className='w-full flex justify-center active:bg-primary/10 rounded-2xl h-8 items-center transition-all duration-100 ease-in-out z-10 text-foreground active:scale-150'>
+          Events
+        </Link>
+        <Link to="/members" onClick={() => setMenuOpen(false)} className='w-full flex justify-center active:bg-primary/10 rounded-2xl h-8 items-center transition-all duration-100 ease-in-out z-10 text-foreground active:scale-150'>
+          Members
+        </Link>
+        <a href="https://www.rmlau.ac.in/">
+          <img src="/images/rmlauLogo.png" alt="Rmalau Logo" className="
          bg-transparent  h-8 w-8 rounded-xl active:scale-1000 transition-all duration-300 z-50
         "/>
-      </a>
+        </a>
 
 
       </div>
