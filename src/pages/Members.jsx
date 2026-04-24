@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { members } from '../data/members'
 import GridAnimation from '../components/GridAnimation'
+import {  Search } from 'lucide-react'
 
 function Members() {
+  let [querry,setQuerry] = useState('');
+  const handleSearchInput = (e) => {
+    setQuerry(e.target.value);
+
+  }
+  const filteredData = members.filter((member) => member.name.toLowerCase().includes(querry.toLowerCase()));
   return (
     <div className='bg-linear-to-b from-background/90 via-black/60 to-background/90'>
       <div className="hidden md:block">
@@ -16,13 +23,29 @@ function Members() {
           <p className="animate-[fadeIn_1s_ease-in-out] text-muted-foreground mb-12">
             Dedicated individuals working together to build a strong, collaborative, and growing tech community.
           </p>
+          <div className='z-5 h-12 transition-all duration-300 animate-[fadeIn_1s_ease-in-out] w-100  flex items-center justify-center'>
+
+
+            <input id='search' type="text" placeholder='Enter member name' className='px-5 border border-primary rounded-s-xl h-8 w-50 sm:w-100 outline-none ' onChange={handleSearchInput} />
+            <button  className='rounded-r-xl bg-primary text-sm flex justify-center items-center w-15 h-8 mr-2 cursor-pointer '>
+              <Search className='hover:scale-110'/>
+            </button>
+
+          </div>
         </div>
         <div className="flex flex-col justify-center items-center">
           <div className=" w-4/5 h-4/5 rounded-2xl">
             <div className="p-5 gap-5 grid gird-cols-1 sm:grid-cols-2 md:grid-cols-3 ">
               {/* Profile Cards */}
               {
-                members.map((member) => (
+                filteredData.length == 0 ? (
+                  <div className='col-start-2 place-items-center'>
+                    <h1 className='text-muted-foreground'>
+                      No Results Found!
+                    </h1>
+                  </div>
+                ) :
+                filteredData.map((member) => (
                   <div key={member.id} className="animate-[fadeIn_1s_ease-in-out] relative group rounded-2xl
               overflow-hidden border border-primary/40 sm:border-white/10  hover:border-primary/40 h-96 hover:-translate-y-2 transition-all duration-300 hover:shadow-[0_0_30px_rgba(32,178,166,0.2)] cursor-pointer z-10 flex items-center justify-center
             max-w-59 sm:max-w-68 max-h-83 sm:max-h-96
