@@ -90,7 +90,7 @@ transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0
       </section>
 
 
-      <section className="events-sec py-24 ">
+      <section className="events-sec pb-24">
         <div className="container mx-auto px-6">
 
           <div className="text-center mb-12">
