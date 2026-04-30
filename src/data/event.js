@@ -13,6 +13,7 @@ export const events = [
     time: "10:00 AM onwards",
     image: "/images/websprint1.png", // add later
   },
+  
 
 
 ];

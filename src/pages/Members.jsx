@@ -4,18 +4,28 @@ import GridAnimation from '../components/GridAnimation'
 import {  Search } from 'lucide-react'
 
 function Members() {
+
   let [querry,setQuerry] = useState('');
   const handleSearchInput = (e) => {
     setQuerry(e.target.value);
-
   }
+
   const filteredData = members.filter((member) => member.name.toLowerCase().includes(querry.toLowerCase()));
   return (
     <div className='bg-linear-to-b from-background/90 via-black/60 to-background/90'>
       <div className="hidden md:block">
         <GridAnimation />
       </div>
-      <section className='min-h-screen py-30 mx-5'>
+
+       {/* backgroundImage*/}
+             <div
+               className="fixed inset-0 bg-cover bg-center z-0 bg-no-repeat pointer-events-none" style={{ backgroundImage: `url('images/backgroundImg.png')` }}
+             ></div>
+
+             {/*overlay layer*/}
+             <div className='fixed inset-0 bg-linear-to-b from-black/70 to-black/80 '></div>
+
+      <section className='min-h-screen py-30 mx-5 relative z-10'>
         <div className='flex flex-col justify-center items-center text-center'>
           <h2 className="animate-[fadeIn_1s_ease-in-out] text-4xl font-bold mb-4">
             Meet the <span className="text-primary">Team</span> Behind the <span className="text-primary">Community</span>
@@ -47,7 +57,7 @@ function Members() {
                 ) :
                 filteredData.map((member) => (
                   <div key={member.id} className="animate-[fadeIn_1s_ease-in-out] relative group rounded-2xl
-              overflow-hidden border border-primary/40 sm:border-white/10  hover:border-primary/40 h-96 hover:-translate-y-2 transition-all duration-300 hover:shadow-[0_0_30px_rgba(32,178,166,0.2)] cursor-pointer z-10 flex items-center justify-center
+              overflow-hidden border bg-primary/10 backdrop-blur-md sm:backdrop-blur-xs border-primary/40 sm:border-white/10  hover:border-primary/40 h-96 hover:-translate-y-2 transition-all duration-300 hover:shadow-[0_0_30px_rgba(32,178,166,0.2)] cursor-pointer z-10 flex items-center justify-center
             max-w-59 sm:max-w-68 max-h-83 sm:max-h-96
               ">
 
@@ -85,4 +95,4 @@ function Members() {
   )
 }
 
-export default Members
+export default Members;

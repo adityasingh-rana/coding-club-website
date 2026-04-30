@@ -11,6 +11,17 @@ function Events() {
        <div className="hidden md:block">
           <GridAnimation />
         </div>
+        {/* backgroundImage*/}
+             <div
+               className="fixed inset-0 bg-cover bg-center z-0 bg-no-repeat pointer-events-none"
+               style={{ backgroundImage: `url('images/backgroundImg.png')` }}
+             ></div>
+
+             {/*overlay layer*/}
+             <div className='fixed inset-0 bg-linear-to-b from-black/60 via-black/90 to-black/80'></div>
+      <div className='relative z-10'>
+
+
       <section className="py-30">
         <div className="animate-[fadeIn_1s_ease-in-out] container mx-auto px-6 text-center z-10">
 
@@ -24,7 +35,7 @@ function Events() {
           {/* Cards */}
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto ">
             {/* Card 1 */}
-            <div className="animate-[fadeIn_0.8s_ease-in-out] p-6 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 hover:-translate-y-3 hover:scale-[1.02]
+            <div className="animate-[fadeIn_0.8s_ease-in-out] p-6 rounded-xl bg-primary/10 backdrop-blur-xs border border-white/10 hover:-translate-y-3 hover:scale-[1.02]
 transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0.2)] z-10"
             >
 
@@ -41,7 +52,7 @@ transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0
 
             </div>
             {/* Card 2 */}
-            <div className="z-10 animate-[fadeIn_0.8s_ease-in-out] p-6 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 hover:-translate-y-3 hover:scale-[1.02]
+            <div className="z-10 animate-[fadeIn_0.8s_ease-in-out] p-6 rounded-xl bg-primary/10 backdrop-blur-xs border border-white/10 hover:-translate-y-3 hover:scale-[1.02]
 transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0.2)]">
 
               <div className='flex justify-center'>
@@ -59,7 +70,7 @@ transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0
 
             {/* Card 3 */}
 
-            <div className="animate-[fadeIn_0.8s_ease-in-out] p-6 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 hover:-translate-y-3 hover:scale-[1.02]
+            <div className="animate-[fadeIn_0.8s_ease-in-out] p-6 rounded-xl bg-primary/10 backdrop-blur-xs border border-white/10 hover:-translate-y-3 hover:scale-[1.02]
 transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0.2)] z-10">
 
               <div className='flex justify-center'>
@@ -100,7 +111,7 @@ transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0
             {events.map((event) => (
 
               <div  key={event.id} className="relative group rounded-2xl
-              shadow-[0_0_30px_rgba(32,178,166,0.2)] sm:shadow-none overflow-hidden border border-primary/40 sm:border-white/10 active:scale-300 hover:border-primary/40 h-96 hover:-translate-y-2 transition-all duration-300 hover:shadow-[0_0_30px_rgba(32,178,166,0.2)] cursor-pointer z-10 flex items-center justify-center ">
+              shadow-[0_0_30px_rgba(32,178,166,0.2)] sm:shadow-none overflow-hidden border border-primary/40 sm:border-white/10 active:scale-300 hover:border-primary/40 h-96 hover:-translate-y-2 transition-all duration-300 hover:shadow-[0_0_30px_rgba(32,178,166,0.2)] cursor-pointer z-10 flex items-center justify-center bg-primary/10 backdrop-blur-md sm:backdrop-blur-xs">
 
                 {/* Background Image */}
                 <img
@@ -152,6 +163,7 @@ transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0
 
         </div>
       </section>
+      </div>
     </div>
   )
 }

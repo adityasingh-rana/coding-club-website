@@ -46,6 +46,10 @@ function Navbar() {
             <Link to='/members' className={`px-4 py-2 text-sm  rounded-full ${location.pathname === '/members' ? 'bg-surface text-foreground' : 'text-muted-foreground hover:text-foreground hover:bg-surface'} `}>
               Members
             </Link>
+            {/* <Link to='/resources' className={`px-4 py-2 text-sm  rounded-full ${location.pathname === '/resources' ? 'bg-surface text-foreground' : 'text-muted-foreground hover:text-foreground hover:bg-surface'} `}
+            >
+              Resources
+            </Link> */}
             {/* <Link to='/contact' className='px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full hover:bg-surface'>
               Contact
             </Link> */}

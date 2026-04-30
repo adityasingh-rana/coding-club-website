@@ -8,6 +8,7 @@ import Events from './pages/Events.jsx'
 import Members from './pages/Members.jsx'
 import Contact from './pages/Contact.jsx'
 import EventDetails from "./pages/EventDetails";
+import Resources from './pages/Resources.jsx'
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "/events/:id",
         element: <EventDetails />
+      },
+      {
+        path: "/resources",
+        element: <Resources/>
       }
     ]
   },
