@@ -3,7 +3,6 @@ import bgImage from '../assets/darkthemeCodingBackgroundimg.jpg'
 import GridAnimation from '../components/GridAnimation';
 
 
-
 function Home() {
 
   const Navigate = useNavigate();
@@ -22,7 +21,7 @@ function Home() {
         ></div>
 
         {/*overlay layer*/}
-        <div className='absolute inset-0 bg-linear-to-r from-primary/10 via-black/85 to-primary/10'></div>
+        <div className='absolute inset-0 bg-linear-to-b from-black/75 via-black/80 to-black/75'></div>
 
 
 
