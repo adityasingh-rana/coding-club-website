@@ -22,7 +22,7 @@ function Home() {
         ></div>
 
         {/*overlay layer*/}
-        <div className='absolute inset-0 bg-linear-to-b from-black/80 via-black/90 to-primary/10'></div>
+        <div className='absolute inset-0 bg-linear-to-r from-primary/10 via-black/85 to-primary/10'></div>
 
 
 
@@ -49,7 +49,7 @@ function Home() {
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 mt-6 w-full sm:w-auto">
             <button
-              className=" sm:w-auto hover:scale-105 border cursor-pointer px-6 py-3 rounded-full shadow-lg shadow-primary/30 transition-all duration-300 text-white bg-primary border-primary hover:bg-primary2 animate-bounce hover:animate-none"
+              className=" sm:w-auto hover:scale-105 border cursor-pointer px-6 py-3 rounded-full shadow-lg shadow-primary/30 transition-all duration-300 text-white bg-primary border-primary hover:bg-primary2"
               onClick={() => Navigate('/events')}
             >
               Explore Events
@@ -65,6 +65,7 @@ function Home() {
                  rounded-full
                   flex justify-center items-center
                   transition-all duration-300
+                  bg-surface sm:bg-transparent
                 hover:bg-surface
                   hover:shadow-md hover:shadow-primary/20
                   active:scale-95 cursor-pointer"
@@ -75,6 +76,20 @@ function Home() {
           </div>
         </div>
       </section>
+
+      {/* Rmlau logo */}
+      <div className="hidden md:block">
+        <a href="https://www.rmlau.ac.in/">
+        <img src="/images/rmlauLogo.png" alt="Rmalau Logo" className="
+        relative
+        md:fixed
+        shadow-lg shadow-primary
+        bottom-18 bg-transparent right-8 h-15 w-15 rounded-2xl hover:scale-110 transition-all duration-300 z-50
+        " style={{
+            boxShadow: "3px 3px 10px #20b2a6"
+          }} />
+      </a>
+      </div>
     </>
   )
 }

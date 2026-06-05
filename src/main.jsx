@@ -9,6 +9,7 @@ import Members from './pages/Members.jsx'
 import Contact from './pages/Contact.jsx'
 import EventDetails from "./pages/EventDetails";
 import Resources from './pages/Resources.jsx'
+import EventsResults from './pages/EventsResults.jsx'
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: "/resources",
         element: <Resources/>
+      },
+      {
+        path: "/eventsresults/:id",
+        element: <EventsResults/>
       }
     ]
   },

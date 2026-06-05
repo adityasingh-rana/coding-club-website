@@ -1,10 +1,11 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { events } from "../data/event";
 import GridAnimation from "../components/GridAnimation";
 import { Download } from "lucide-react";
 
 function EventDetails() {
   const { id } = useParams();
+  const navigate = useNavigate();
 
   const event = events.find((e) => e.id === Number(id));
 
@@ -13,26 +14,66 @@ function EventDetails() {
   }
 
   return (
-    <div className="relative min-h-screen overflow-x-hidden bg-linear-to-b from-black/90 via-black/85 to-background/90 pb-10">
+    <div className="relative min-h-screen overflow-hidden pb-10 animate-[fadeIn_1s_ease-in-out]">
       <div className="hidden md:block pointer-events-none">
         <GridAnimation />
       </div>
 
-      <section className="relative z-10 mx-auto max-w-6xl px-4 pb-16 pt-24 sm:px-6">
-        <h1 className="mb-4 bg-linear-to-r from-primary to-highlight bg-clip-text text-2xl font-bold text-transparent sm:text-3xl md:text-4xl">
-          {event.title}
-        </h1>
+      {/* backgroundImage*/}
+      <div
+        className="fixed inset-0 bg-cover bg-center z-0 bg-no-repeat pointer-events-none"
+        style={{ backgroundImage: `url('../images/backgroundImg.png')` }}
+      ></div>
 
-        <p className="mb-6 text-muted-foreground">
-          {event.date} • {event.venue}
-        </p>
+      {/*overlay layer*/}
+      <div className='fixed inset-0 bg-linear-to-b from-black/70 to-black/80 '></div>
 
-        <div className="flex flex-col items-center gap-8 md:flex-row md:items-start">
+    <section className="relative z-10 mx-auto max-w-6xl px-4 pb-16 pt-24 sm:px-6">
+
+    {/* hero section */}
+
+    <div className='flex flex-col items-center gap-2'>
+          <h1
+            className='text-4xl  md:text-6xl font-bold
+            max-w-3xl z-3 '
+          ><span className='bg-linear-to-r from-primary to-highlight text-transparent bg-clip-text'>WEBSPRINT 2026</span></h1>
+          <h2 className='mx-3 max-w-xs sm:max-w-2xl text-muted-foreground'>{event.shortDescription}</h2>
+          <p className='mx-3 max-w-xs sm:max-w-2xl text-muted-foreground'>
+            {event.date} || {event.time} || {event.venue}
+          </p>
+
+        </div>
+
+      {/* contetn section */}
+
+
+        <div className="flex flex-col items-center gap-8 md:flex-row md:items-start mt-15">
           <img
-            src={event.image || "/images/websprint1.png"}
+            src="/events/websprint/websprint1.png"
             alt={event.title}
             className="h-auto w-full rounded-xl object-cover md:w-1/2"
           />
+
+          <div className="flex justify-center mt-2  md:hidden">
+            <div className=' flex justify-center items-center rounded-full border border-primary bg-primary sm:bg-surface hover:bg-linear-to-r from-primary to-highlight text-center text-white transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 active:scale-95  w-35 h-10 text-sm mt-0 sm:mt-3 cursor-pointer'>
+            <a
+              href="https://forms.gle/vbPLPBiuhjAqGGTo7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${event.status === 'live' ? '' : 'hidden'} z-15`}
+            >
+              Register Now
+            </a>
+            <a
+              className={`${event.status === 'expired' ? '' : 'hidden'} `}
+              onClick={() => navigate(`/eventsresults/${event.id}`)}
+            >
+              View Results →
+            </a>
+
+          </div>
+          </div>
+
 
           <div className="w-full md:w-1/2 flex flex-col gap-5">
             <h2 className="mb-2 text-lg font-semibold">Description:</h2>
@@ -59,33 +100,44 @@ function EventDetails() {
               <li><strong>Phone:</strong> 9559155959</li>
               <li><strong>Email:</strong> connect.csermlau@gmail.com</li>
             </ul>
-             <div>
+            <div>
               <h2>Important Documents:</h2>
               <div className="flex gap-2">
                 <p className="text-muted-foreground"> Problem Statements:</p>
                 <a href="/docs/WebsprintPS.pdf" className="text-blue-400 hover:underline">
-                 <Download size={20} className="hover:scale-115"/>
+                  <Download size={20} className="hover:scale-115" />
                 </a>
               </div>
               <div className="flex gap-2">
                 <p className="text-muted-foreground"> RuleBook:</p>
                 <a href="/docs/WebSprint-2026_Final-Rulebook.pdf" className="text-blue-400 hover:underline">
-                 <Download size={20} className="hover:scale-115" />
-                 </a>
+                  <Download size={20} className="hover:scale-115" />
+                </a>
               </div>
             </div>
+          </div>
+        </div>
 
+      </section>
+      <div className="fixed bottom-15 right-15 z-50 hidden md:block">
+      <div className=' flex justify-center items-center rounded-full border border-primary bg-primary sm:bg-surface hover:bg-linear-to-r from-primary to-highlight text-center text-white transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 active:scale-95  w-35 h-10 text-sm mt-0 sm:mt-3 cursor-pointer'>
             <a
               href="https://forms.gle/vbPLPBiuhjAqGGTo7"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block w-full rounded-full border border-primary bg-primary px-6 py-3 text-center text-white transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/30 active:scale-95 sm:w-auto animate-bounce hover:animate-none"
+              className={`${event.status === 'live' ? '' : 'hidden'} z-15`}
             >
               Register Now
             </a>
+            <a
+              className={`${event.status === 'expired' ? '' : 'hidden'} `}
+              onClick={() => navigate(`/eventsresults/${event.id}`)}
+            >
+              View Results →
+            </a>
+
           </div>
-        </div>
-      </section>
+      </div>
     </div>
   );
 }

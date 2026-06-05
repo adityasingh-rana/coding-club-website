@@ -24,7 +24,7 @@ function Navbar() {
     <header className={`h-15 min-w-full sm:h-20 animate-[fadeIn_1s_ease-in-out] fixed top-0 left-0 right-0  z-50 ${isScrolled ? "glass py-3" : "bg-transparent py-5"
       }`}>
 
-      <nav className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between ">
+      <nav className=" px-4 sm:px-6 flex items-center justify-between ">
         <div className='tittle'>
           <Link to="/" className='text-xl font-bold tracking-tight hover:text-primary flex justify-center items-center gap-2'>
             <span>
@@ -43,13 +43,13 @@ function Navbar() {
             <Link to='/events' className={`px-4 py-2 text-sm  rounded-full ${location.pathname === '/events' ? 'bg-surface text-foreground' : 'text-muted-foreground hover:text-foreground hover:bg-surface'} `}>
               Events
             </Link>
-            <Link to='/members' className={`px-4 py-2 text-sm  rounded-full ${location.pathname === '/members' ? 'bg-surface text-foreground' : 'text-muted-foreground hover:text-foreground hover:bg-surface'} `}>
-              Members
-            </Link>
             {/* <Link to='/resources' className={`px-4 py-2 text-sm  rounded-full ${location.pathname === '/resources' ? 'bg-surface text-foreground' : 'text-muted-foreground hover:text-foreground hover:bg-surface'} `}
             >
               Resources
             </Link> */}
+            <Link to='/members' className={`px-4 py-2 text-sm  rounded-full ${location.pathname === '/members' ? 'bg-surface text-foreground' : 'text-muted-foreground hover:text-foreground hover:bg-surface'} `}>
+              Members
+            </Link>
             {/* <Link to='/contact' className='px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full hover:bg-surface'>
               Contact
             </Link> */}
@@ -80,6 +80,9 @@ function Navbar() {
         <Link to="/events" onClick={() => setMenuOpen(false)} className='w-full flex justify-center active:bg-primary/10 rounded-2xl h-8 items-center transition-all duration-100 ease-in-out z-10 text-foreground active:scale-150'>
           Events
         </Link>
+         {/* <Link to="/resources" onClick={() => setMenuOpen(false)} className='w-full flex justify-center active:bg-primary/10 rounded-2xl h-8 items-center transition-all duration-100 ease-in-out z-10 text-foreground active:scale-150'>
+          Resources
+        </Link> */}
         <Link to="/members" onClick={() => setMenuOpen(false)} className='w-full flex justify-center active:bg-primary/10 rounded-2xl h-8 items-center transition-all duration-100 ease-in-out z-10 text-foreground active:scale-150'>
           Members
         </Link>
