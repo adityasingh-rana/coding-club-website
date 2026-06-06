@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom';
+import { motion } from "framer-motion";
 
 function Navbar() {
 
@@ -21,15 +22,19 @@ function Navbar() {
   }, []);
 
   return (
-    <header className={`h-15 min-w-full sm:h-20 animate-[fadeIn_1s_ease-in-out] fixed top-0 left-0 right-0  z-50 ${isScrolled ? "glass py-3" : "bg-transparent py-5"
+    <header className={`h-15 min-w-full sm:h-20  fixed top-0 left-0 right-0  z-50 ${isScrolled ? "glass py-3" : "bg-transparent py-5"
       }`}>
 
       <nav className=" px-4 sm:px-6 flex items-center justify-between ">
         <div className='tittle'>
           <Link to="/" className='text-xl font-bold tracking-tight hover:text-primary flex justify-center items-center gap-2'>
+            <motion.img
+              layoutId="site-logo"
+              src="/icons/hacker.png"
+              alt="CommunityLogo"
+              className="h-8 w-8 mb-3"
+            />
             <span>
-              <img src="/images/communityLogo.png" alt="CommunityLogo" className='h-8 w-8 rounded-xl' />
-            </span><span>
               IET STUDENTS COMMUNITY
             </span>
           </Link>
@@ -80,7 +85,7 @@ function Navbar() {
         <Link to="/events" onClick={() => setMenuOpen(false)} className='w-full flex justify-center active:bg-primary/10 rounded-2xl h-8 items-center transition-all duration-100 ease-in-out z-10 text-foreground active:scale-150'>
           Events
         </Link>
-         {/* <Link to="/resources" onClick={() => setMenuOpen(false)} className='w-full flex justify-center active:bg-primary/10 rounded-2xl h-8 items-center transition-all duration-100 ease-in-out z-10 text-foreground active:scale-150'>
+        {/* <Link to="/resources" onClick={() => setMenuOpen(false)} className='w-full flex justify-center active:bg-primary/10 rounded-2xl h-8 items-center transition-all duration-100 ease-in-out z-10 text-foreground active:scale-150'>
           Resources
         </Link> */}
         <Link to="/members" onClick={() => setMenuOpen(false)} className='w-full flex justify-center active:bg-primary/10 rounded-2xl h-8 items-center transition-all duration-100 ease-in-out z-10 text-foreground active:scale-150'>
