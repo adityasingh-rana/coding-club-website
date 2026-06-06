@@ -45,7 +45,7 @@ function EventsResults() {
 
         <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto ">
           <div className="animate-[fadeIn_0.8s_ease-in-out] p-6 rounded-xl bg-primary/10 backdrop-blur-xs border border-white/10 hover:-translate-y-3 hover:scale-[1.02]
-transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0.2)] z-10 h-20 w-50 flex justify-center items-center flex-col">
+transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0.2)] z-10 h-30 sm:h-20 w-80 sm:w-50 flex justify-center items-center flex-col">
 
             <h3 className="text-xl font-semibold mb-2">{event.participants}+ </h3>
             <p className="text-muted-foreground">
@@ -54,7 +54,7 @@ transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0
 
           </div>
           <div className="animate-[fadeIn_0.8s_ease-in-out] p-6 rounded-xl bg-primary/10 backdrop-blur-xs border border-white/10 hover:-translate-y-3 hover:scale-[1.02]
-transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0.2)] z-10 h-20 w-50 flex justify-center items-center flex-col">
+transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0.2)] z-10 h-30 sm:h-20 w-80 sm:w-50 flex justify-center items-center flex-col">
 
             <h3 className="text-xl font-semibold mb-2">{event.teams} </h3>
             <p className="text-muted-foreground">
@@ -63,7 +63,7 @@ transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0
 
           </div>
           <div className="animate-[fadeIn_0.8s_ease-in-out] p-6 rounded-xl bg-primary/10 backdrop-blur-xs border border-white/10 hover:-translate-y-3 hover:scale-[1.02]
-transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0.2)] z-10 h-20 w-50 flex justify-center items-center flex-col">
+transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0.2)] z-10 h-30 sm:h-20 w-80 sm:w-50 flex justify-center items-center flex-col">
 
             <h3 className="text-xl font-semibold mb-2">{event.projectSubmited} </h3>
             <p className="text-muted-foreground">
@@ -88,10 +88,10 @@ transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0
           <div className="flex flex-col md:flex-row items-center md:items-end justify-center gap-8">
 
             {/* Winner ps - 01 */}
-            <div className="relative w-full sm:w-100 h-100 rounded-3xl border border-primary/30 bg-linear-to-b from-primary/15 via-white/5 to-white/5 backdrop-blur-md shadow-[0_0_35px_rgba(32,178,166,0.20)] transition-all duration-300 hover:-translate-y-2 md:scale-105">
+            <div className="relative w-70 sm:w-100 h-100 sm:h-100 rounded-3xl border border-primary/30 bg-linear-to-b from-primary/15 via-white/5 to-white/5 backdrop-blur-md shadow-[0_0_35px_rgba(32,178,166,0.20)] transition-all duration-300 hover:-translate-y-2 md:scale-105">
               <div className="absolute inset-0 rounded-3xl bg-linear-to-b from-primary/10 via-transparent to-cyan-400/10 pointer-events-none"></div>
 
-              <h3 className=" absolute top-4 left-35 sm:left-40 text-3xl font-bold text-primary">
+              <h3 className=" absolute top-4 left-25 sm:left-40 text-3xl font-bold text-primary">
                 Ps: 01
               </h3>
 
@@ -99,16 +99,13 @@ transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0
                 🥇
               </div>
 
-              <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
-
-                <div className="rounded mt-10 h-50 w-80">
+              <div className="relative mt-15 z-10 flex h-80 flex-col items-center justify-evenly px-6 text-center">
 
                   <img
                     src="/events/websprint/winners/ps1.jpeg"
                     alt="Winner"
-                    className="h-48 w-80 rounded object-cover"
+                    className="h-40 sm:h-48 w-80 rounded object-cover"
                   />
-                </div>
 
                 <h3 className="mt-6 text-3xl font-bold text-yellow-300">
                   Winner
@@ -129,10 +126,10 @@ transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0
             </div>
 
             {/* Winner ps - 02*/}
-            <div className="relative w-full sm:w-100 h-100 rounded-3xl border border-primary/30 bg-linear-to-b from-primary/15 via-white/5 to-white/5 backdrop-blur-md shadow-[0_0_35px_rgba(32,178,166,0.20)] transition-all duration-300 hover:-translate-y-2 md:scale-105">
+            <div className="relative w-70 sm:w-100 h-100 sm:h-100 rounded-3xl border border-primary/30 bg-linear-to-b from-primary/15 via-white/5 to-white/5 backdrop-blur-md shadow-[0_0_35px_rgba(32,178,166,0.20)] transition-all duration-300 hover:-translate-y-2 md:scale-105">
               <div className="absolute inset-0 rounded-3xl bg-linear-to-b from-primary/10 via-transparent to-cyan-400/10 pointer-events-none"></div>
 
-              <h3 className=" absolute top-4 left-35 sm:left-40 text-3xl font-bold text-primary">
+              <h3 className=" absolute top-4 left-25 sm:left-40 text-3xl font-bold text-primary">
                 Ps: 02
               </h3>
 
@@ -140,14 +137,13 @@ transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0
                 🥇
               </div>
 
-              <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
-                <div className="flex justify-center items-center rounded mt-10 h-50 w-80">
+              <div className="relative mt-15 z-10 flex h-80 flex-col items-center justify-evenly px-6 text-center">
+
                   <img
                     src="/events/websprint/winners/ps2.jpeg"
                     alt="Winner"
-                    className="h-48 w-80 object-cover rounded "
+                    className="h-40 sm:h-48 w-80 rounded object-cover"
                   />
-                </div>
 
                 <h3 className="mt-6 text-3xl font-bold text-yellow-300">
                   Winner
@@ -168,10 +164,10 @@ transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0
             </div>
 
             {/* Winner Ps - 03 */}
-            <div className="relative w-full sm:w-100 h-100 rounded-3xl border border-primary/30 bg-linear-to-b from-primary/15 via-white/5 to-white/5 backdrop-blur-md shadow-[0_0_35px_rgba(32,178,166,0.20)] transition-all duration-300 hover:-translate-y-2 md:scale-105">
+            <div className="relative w-70 sm:w-100 h-100 sm:h-100 rounded-3xl border border-primary/30 bg-linear-to-b from-primary/15 via-white/5 to-white/5 backdrop-blur-md shadow-[0_0_35px_rgba(32,178,166,0.20)] transition-all duration-300 hover:-translate-y-2 md:scale-105">
               <div className="absolute inset-0 rounded-3xl bg-linear-to-b from-primary/10 via-transparent to-cyan-400/10 pointer-events-none"></div>
 
-              <h3 className=" absolute top-4 left-35 sm:left-40 text-3xl font-bold text-primary">
+              <h3 className=" absolute top-4 left-25 sm:left-40 text-3xl font-bold text-primary">
                 Ps: 03
               </h3>
 
@@ -179,18 +175,18 @@ transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0
                 🥇
               </div>
 
-              <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
-                <div className="rounded mt-10 h-50 w-80">
+              <div className="relative mt-15 z-10 flex h-80 flex-col items-center justify-evenly px-6 text-center">
+
                   <img
                     src="/events/websprint/winners/ps3.jpeg"
                     alt="Winner"
-                    className="h-48 w-80 rounded object-cover"
+                    className="h-40 sm:h-48 w-80 rounded object-cover"
                   />
-                </div>
 
                 <h3 className="mt-6 text-3xl font-bold text-yellow-300">
                   Winner
                 </h3>
+
                 <p className="mt-1 text-base font-medium text-white">
                   {event.ps3Winner}
                 </p>
@@ -200,7 +196,6 @@ transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0
                   {event.ps3Members.m3},&nbsp;
                   {event.ps3Members.m4}
                 </p>
-
               </div>
 
               <div className="absolute bottom-0 left-1/2 h-3 w-28 -translate-x-1/2 rounded-full bg-cyan-400/90 blur-xl"></div>
