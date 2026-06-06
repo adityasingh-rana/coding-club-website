@@ -28,12 +28,9 @@ function Navbar() {
       <nav className=" px-4 sm:px-6 flex items-center justify-between ">
         <div className='tittle'>
           <Link to="/" className='text-xl font-bold tracking-tight hover:text-primary flex justify-center items-center gap-2'>
-            <motion.img
-              layoutId="site-logo"
-              src="/icons/hacker.png"
-              alt="CommunityLogo"
-              className="h-8 w-8 mb-3"
-            />
+            <span>
+              <img src="/icons/hacker.png" alt="CommunityLogo" className="h-8 w-8 mb-3" />
+            </span>
             <span>
               IET STUDENTS COMMUNITY
             </span>

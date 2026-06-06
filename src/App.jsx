@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import IntroAnimation from "./components/IntroAnimation";
 
 function App() {
-  
+
   const [showIntro, setShowIntro] = useState(true);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ function App() {
       </main>
 
       <Footer />
-
+    {showIntro && <IntroAnimation />}
     </div>
   )
 }
