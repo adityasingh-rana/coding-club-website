@@ -10,6 +10,9 @@ import Contact from './pages/Contact.jsx'
 import EventDetails from "./pages/EventDetails";
 import Resources from './pages/Resources.jsx'
 import EventsResults from './pages/EventsResults.jsx'
+import DSA from './pages/DSA.jsx'
+import Development from './pages/Development.jsx'
+import Academics from './pages/Academics.jsx'
 
 const router = createBrowserRouter([
   {
@@ -38,13 +41,25 @@ const router = createBrowserRouter([
         element: <EventDetails />
       },
       {
-        path: "/resources",
-        element: <Resources/>
+        path: "/eventsresults/:id",
+        element: <EventsResults />
       },
       {
-        path: "/eventsresults/:id",
-        element: <EventsResults/>
-      }
+        path: "/resources",
+        element: <Resources />,
+      },
+      {
+            path: "/dsa",
+            element: <DSA />
+          },
+          {
+            path: "/development",
+            element: <Development />
+          },
+          {
+            path: "/academics",
+            element: <Academics />
+          }
     ]
   },
 ]);
