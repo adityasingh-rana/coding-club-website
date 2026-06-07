@@ -70,9 +70,8 @@ function Members() {
                     />
                     <div className="flex flex-col mt-25 sm:mt-30 ml-3 items-center gap-0 sm:gap-1 z-5">
                       <h1 className='z-5 text-foreground text-xl sm:text-2xl mt-2 sm:mt-0'>{member.name} </h1>
-                      <p className="z-5 text-sm  text-center max-w-45 sm:max-w-55 text-primary">{member.role} ({member.batch}) </p>
-                      <p className="z-5 text-xs text-muted-foreground max-w-45 sm:max-w-55 text-center">
-                        {member.bio}
+                      <p className="z-5 text-xs text-muted-foreground max-w-45 sm:max-w-50 text-center">
+                        {member.shortDescription}
                       </p>
                       <a href={member.linkedIn} className='z-50'>
                         <button className="z-20 text-xs cursor-pointer mt-1 sm:mt-3 glass border border-primary hover:bg-primary active:bg-primary text-white font-bold py-2 px-4 h-8 w-25 rounded-2xl transition-all duration-300" >

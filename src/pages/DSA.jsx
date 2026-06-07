@@ -44,7 +44,7 @@ function DSA() {
           max-w-3xl mx-15 z-3 text-gray-300'
           ><span className='bg-primary text-transparent bg-clip-text'>DSA</span> Resources</h1>
           <h2 className='text-sm  md:text-xl
-            max-w-3xl text-center mx-15 mt-5 text-muted-foreground z-3 '>
+            max-w-3xl text-center mx-15 mt-2 text-muted-foreground z-3 '>
             Master Data Structures & Algorithms through curated sheets, roadmaps, coding platforms, and interview preparation resources.
           </h2>
         </div>
@@ -61,9 +61,9 @@ function DSA() {
         </div>
 
         {/* category pills */}
-        <div className="flex justify-center ">
+        <div className="flex mx-8 sm:mx-auto justify-center ">
 
-          <div className="flex gap-3 py-6 max-w-sm sm:max-w-4xl flex-wrap px-4  justify-center">
+          <div className="flex gap-3 py-3 max-w-sm sm:max-w-4xl flex-wrap px-4  justify-center">
             {categories.map((category) => (
               <button
                 key={category}
@@ -85,13 +85,13 @@ function DSA() {
 
         {/* Featured Resources */}
 
-        <div className='mx-35 mt-10 '>
-          <h2 className='text-2xl uppercase tracking-[0.2em] font-semibold'>
+        <div className='text-center sm:text-start mt-5 mx-5 sm:mx-35'>
+          {/* <h2 className='text-2xl uppercase tracking-[0.2em] font-semibold'>
             POPULAR <span className="text-primary">Resources</span>
           </h2>
           <p className="text-muted-foreground mt-2">
             Start your DSA journey with the most trusted and widely used learning resources.
-          </p>
+          </p> */}
 
           {/* Cards */}
           <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-8 sm:mx-auto mt-10'>
@@ -113,7 +113,7 @@ function DSA() {
                   <p className="text-muted-foreground">
                     {resource.description}
                   </p>
-                  <a href={resource.link} target='_blank' className='transition-all duration-300 text-sm font-semibold cursor-pointer border border-primary rounded-2xl w-25 h-8 flex justify-center items-center mt-2 bg-black/25 hover:bg-primary text-white '>Explore →</a>
+                  <a href={resource.link} target='_blank' className='transition-all duration-0 sm:duration-300 text-sm font-semibold cursor-pointer border border-primary rounded-2xl w-25 h-8 flex justify-center items-center mt-2 active:bg-primary bg-black/25 hover:bg-primary text-white '>Explore →</a>
 
                 </div>
               );
@@ -122,12 +122,12 @@ function DSA() {
         </div>
 
         {/* All Resources */}
-        <div className="mt-20 mx-35">
-          <h2 className='text-2xl uppercase tracking-[0.2em] font-semibold'>
+        <div className="mt-10 mx-5 sm:mx-35">
+          <h2 className='text-2xl text-center uppercase tracking-[0.2em] font-semibold'>
             All <span className="text-primary">Resources</span>
           </h2>
 
-          <p className="text-muted-foreground mt-2">
+          <p className="text-muted-foreground text-center mt-2">
             Browse all available DSA learning resources.
           </p>
 
