@@ -7,8 +7,8 @@ export default function IntroAnimation() {
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    const t1 = setTimeout(() => setMoveLogo(true), 5600);
-    const t2 = setTimeout(() => setFadeOut(true), 6200);
+    const t1 = setTimeout(() => setMoveLogo(true), 6300);
+    const t2 = setTimeout(() => setFadeOut(true), 6500);
 
     return () => {
       clearTimeout(t1);
@@ -20,7 +20,7 @@ export default function IntroAnimation() {
     <AnimatePresence>
       {!fadeOut && (
         <motion.div
-          className="fixed inset-0 z-9999 overflow-hidden bg-black"
+          className="fixed inset-0 z-[9999] overflow-hidden bg-black"
           initial={{ opacity: 1 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -63,14 +63,14 @@ export default function IntroAnimation() {
             }}
           />
 
-          <div className="absolute left-1/2 top-[58%] z-10 -translate-x-1/2 text-center">
+          <div className="absolute left-1/2 top-[58%] z-10 -translate-x-1/2 text-center w-90">
             <TypeAnimation
               sequence={[
                 "Initializing IET Community...",
                 1000,
-                "Loading Communities...",
+                "Fetching Resources...",
                 1000,
-                "Loading Events...",
+                "Syncing Members...",
                 1000,
                 "Ready.",
               ]}
@@ -78,18 +78,26 @@ export default function IntroAnimation() {
               cursor={true}
               className="font-mono text-lg text-[#20B2AA]"
             />
+            
           </div>
 
-          <div className="absolute left-1/2 top-[66%] z-10 w-72 -translate-x-1/2 overflow-hidden rounded-full bg-white/10">
+          <div className="absolute left-1/2 top-[66%] z-10 w-72 -translate-x-1/2 overflow-hidden rounded-full bg-white/10 mt-3 sm:mt-0">
             <motion.div
-              className="h-0.75 bg-[#20B2AA]"
+              className="h-[3px] bg-[#20B2AA]"
               initial={{ width: "0%" }}
               animate={{ width: "100%" }}
               transition={{
-                duration: 5.6,
+                duration: 6,
                 ease: "linear",
               }}
             />
+          </div>
+
+          <div className="absolute left-1/2 top-[70%] z-10 -translate-x-1/2 text-center">
+            <p className="text-sm text-white/80">IET Students Community v1.0</p>
+            <p className="mt-1 text-xs text-gray-500">
+              Designed &amp; Developed by Aditya Singh.
+            </p>
           </div>
         </motion.div>
       )}
