@@ -25,11 +25,11 @@ function Navbar() {
     <header className={`h-15 min-w-full sm:h-20  fixed top-0 left-0 right-0  z-50 ${isScrolled ? "glass py-3" : "bg-transparent py-5"
       }`}>
 
-      <nav className=" px-4 sm:px-6 flex items-center justify-between ">
-        <div className='tittle'>
+      <nav className=" px-4 sm:px-6 flex items-center justify-between animate-[fadeIn_1s_ease-in-out]">
+        <div className='tittle '>
           <Link to="/" className='text-xl font-bold tracking-tight hover:text-primary flex justify-center items-center gap-2'>
             <span>
-              <img src="/icons/hacker.png" alt="CommunityLogo" className="h-8 w-8 mb-3" />
+              <img src="/images/communityLogo.png" alt="CommunityLogo" className="h-8 w-10 rounded-xl" />
             </span>
             <span>
               IET STUDENTS COMMUNITY
