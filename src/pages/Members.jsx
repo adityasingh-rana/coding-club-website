@@ -58,7 +58,7 @@ function Members() {
                 filteredData.map((member) => (
                   <div key={member.id} className="animate-[fadeIn_1s_ease-in-out] relative group rounded-2xl
               overflow-hidden border bg-primary/10 backdrop-blur-md sm:backdrop-blur-xs border-primary/40 sm:border-white/10  hover:border-primary/40 h-96 hover:-translate-y-2 transition-all duration-300 hover:shadow-[0_0_30px_rgba(32,178,166,0.2)] cursor-pointer z-10 flex items-center justify-center
-            max-w-59 sm:max-w-68 max-h-83 sm:max-h-96
+            max-w-59 sm:max-w-68 max-h-83 sm:max-h-96 active:scale-110
               ">
 
                     {/* Background Image */}
