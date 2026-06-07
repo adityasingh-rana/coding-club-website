@@ -111,7 +111,7 @@ transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0
               {/* Event Card */}
               {events.map((event) => (
 
-                <div key={event.id} className="relative group rounded-2xl
+                <div onClick={() => navigate(`/events/${event.id}`)} key={event.id} className="relative group rounded-2xl
               shadow-[0_0_30px_rgba(32,178,166,0.2)] sm:shadow-none overflow-hidden border border-primary/40 sm:border-white/10 hover:border-primary/40 h-96 hover:-translate-y-2 transition-all duration-300 hover:shadow-[0_0_30px_rgba(32,178,166,0.2)] cursor-pointer z-10 flex items-center justify-center bg-primary/10 backdrop-blur-md sm:backdrop-blur-xs">
 
                   {/* Background Image */}
@@ -164,9 +164,9 @@ transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0
                     </p>
 
                 <div className='flex flex-col mt-5'>
-                   <a  className=" text-primary transition-all duration-300 group-hover:translate-x-1 cursor-pointer underline sm:no-underline hover:underline z-20" onClick={() => navigate(`/events/${event.id}`)}>
+                   <button  className="text-start text-primary transition-all duration-300 group-hover:translate-x-1 cursor-pointer underline sm:no-underline group-hover:underline z-20" >
                       View Details →
-                    </a>
+                    </button>
 
                 </div>
                   </div>

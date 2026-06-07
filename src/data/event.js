@@ -12,7 +12,7 @@ export const events = [
     venue: "Central Computer Lab (IET)",
     time: "10:00 AM onwards",
     image: "/events/websprint/websprint1.png",
-    participants: 800,
+    participants: 80,
     teams: 20,
     projectSubmited: 20,
     ps1Winner: "Team Name",
