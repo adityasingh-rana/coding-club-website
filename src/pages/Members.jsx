@@ -73,8 +73,8 @@ function Members() {
                       <p className="z-5 text-xs text-muted-foreground max-w-45 sm:max-w-50 text-center">
                         {member.shortDescription}
                       </p>
-                      <a href={member.linkedIn} className='z-50'>
-                        <button className="z-20 text-xs cursor-pointer mt-1 sm:mt-3 glass border border-primary hover:bg-primary active:bg-primary text-white font-bold py-2 px-4 h-8 w-25 rounded-2xl transition-all duration-300" >
+                      <a href={member.linkedIn} target='_blank' className='z-50'>
+                        <button className="z-20 text-xs cursor-pointer mt-1 sm:mt-3 glass border border-primary hover:bg-primary active:bg-primary text-white font-bold py-2 px-4 h-8 w-25 rounded-2xl transition-all sm:duration-300" >
                           LinkedIn →
                         </button>
                       </a>

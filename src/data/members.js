@@ -1,13 +1,4 @@
 export const members = [
-    {
-    id:3,
-    name: 'Bipin Pal',
-    role: 'Community Lead',
-    batch: '2024-28',
-    shortDescription: "Learning Python libraries and diving into AI and machine learning",
-    linkedIn: "#",
-    bg: '/profileCards/BipinProfileCard.png',
-  },
   {
     id:1,
     name: 'Aditya Singh',
@@ -24,6 +15,15 @@ export const members = [
     linkedIn: "https://www.linkedin.com/in/raj-shekhar-patel-332782329/",
     bg: '/profileCards/ProfileCard.png',
   },
+  {
+  id:3,
+  name: 'Bipin Pal',
+  role: 'Community Lead',
+  batch: '2024-28',
+  shortDescription: "Learning Python libraries and diving into AI and machine learning",
+  linkedIn: "#",
+  bg: '/profileCards/BipinProfileCard.png',
+},
   {
     id:4,
     name: 'Priyanshu Jaishwal',
