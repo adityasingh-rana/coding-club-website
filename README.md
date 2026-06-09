@@ -1,6 +1,6 @@
 # IET Students Community Website
 
-A responsive frontend web application built for the **IET Students Community** to showcase events, resources, and community activities.
+A responsive frontend web application built for the **IET Students Community** to showcase events, members, resources, results, and community activities.
 
 🔗 **Live Website:** https://iet-students-community.vercel.app
 
@@ -8,8 +8,9 @@ A responsive frontend web application built for the **IET Students Community** t
 
 ## 🚀 Overview
 
-This project is designed as a scalable platform for managing and promoting coding club activities.
-It begins as a frontend MVP and is planned to evolve into a full-featured platform with advanced capabilities.
+This project is being built as the **flagship resume project** for the IET Students Community.
+
+It started as a frontend MVP and is being expanded step by step into a full-featured student community platform with learning, practice, contests, leaderboards, and community management tools.
 
 ---
 
@@ -18,38 +19,50 @@ It begins as a frontend MVP and is planned to evolve into a full-featured platfo
 - Fully responsive landing page
 - Events listing section
 - Event details page
+- Members page with search functionality
+- Resources landing page
+- DSA resources page
+- Results page
 - Clean and modern UI with smooth interactions
-- Interactive grid animation (optimized for desktop experience)
 - Deployed and accessible across devices
 
 ---
 
 ## 🧱 Roadmap
 
-### 🔹 V2 — Interactivity & Core Features
-- Resources section (PYQs, notes, curated study materials)
-- Members section (core team and contributors)
-- Enhanced event experience (status handling, improved UX)
-- Search and filter functionality for events
+### 🔹 V2 — Backend Foundation
+- MongoDB integration
+- Authentication system
+- User profiles
 
----
+### 🔹 V2.5 — Typing Practice Module
+- Typing trainer inspired by EdClub-style lessons
+- Home row, top row, bottom row, numbers, symbols, and mixed practice
+- Text highlighting
+- WPM and accuracy tracking
+- Progress saving
+- Typing arena with timed tests
+- Weekly and overall typing leaderboards
 
-### 🔹 V3 — Content & Community Engagement
-- Blog section (articles, guides, event recaps)
-- Tech/Startup ideas section
-- Event gallery (photos and highlights)
-- Testimonials / feedback system
+### 🔹 V3 — Management System
+- Admin dashboard
+- Event management
+- Resource management
 
----
+### 🔹 V4 — Coding Arena
+- Daily coding questions
+- Weekly coding contest
+- Weekly leaderboard with points system
+- Overall leaderboard with LinkedIn profile links
+- Badges
+- Streaks with point rewards
 
-### 🔹 V4 — Advanced Platform Features
-- Integrated event registration system
-- Contest platform with inbuilt system
-- Leaderboard system for competitions
-- User profiles (activity, participation, rankings)
-- Admin dashboard for content and event management
-- Authentication system (login/signup)
-- Backend integration for a complete platform
+### 🔹 V5 — Community Expansion
+- Project showcase
+- Team formation
+- Community analytics
+- Achievement wall
+- WebDev hackathons
 
 ---
 
@@ -64,15 +77,16 @@ It begins as a frontend MVP and is planned to evolve into a full-featured platfo
 
 ## 💡 Vision
 
-To build a complete community-driven platform that enables students to learn, collaborate, participate in events, and grow together through technology.
+To build a complete student community platform where students can learn, practice, compete, collaborate, and grow together through technology.
 
 ---
 
 ## 🤝 Feedback
 
 Feedback and suggestions are always welcome.
+
 Feel free to explore the website and share your thoughts to help improve the platform.
 
 ---
 
-⭐ Built step-by-step with the goal of evolving into a production-level system.
+⭐ Built step by step with the goal of becoming a production-level community platform.
