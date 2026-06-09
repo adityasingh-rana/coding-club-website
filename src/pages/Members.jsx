@@ -70,7 +70,10 @@ function Members() {
                     />
                     <div className="flex flex-col mt-25 sm:mt-30 ml-3 items-center gap-0 sm:gap-1 z-5">
                       <h1 className='z-5 text-foreground text-xl sm:text-2xl mt-2 sm:mt-0'>{member.name} </h1>
-                      <p className="z-5 text-xs text-muted-foreground max-w-45 sm:max-w-50 text-center">
+                      <div className='text-primary'>
+                        <p>({member.batch})</p>
+                      </div>
+                      <p className="z-5 text-xs text-muted-foreground max-w-45 sm:max-w-55 text-center">
                         {member.shortDescription}
                       </p>
                       <a href={member.linkedIn} target='_blank' className='z-50'>

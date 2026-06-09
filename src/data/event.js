@@ -7,7 +7,7 @@ export const events = [
     date: "18 April 2026",
     shortDescription: "One day web development hackathon to build real-world solutions.",
     description:
-      "Join WebSprint 2026, a one-day coding challenge where creativity meets technology. Build innovative web-based solutions in a limited time.",
+      "WebSprint 2026 is a one-day web development hackathon designed to   challenge your creativity and technical skills. Participants will work in teams to build innovative web-based solutions within a limited time frame. This event is a great opportunity to collaborate, learn, and showcase your development skills.",
     teamSize: "3-4 members",
     venue: "Central Computer Lab (IET)",
     time: "10:00 AM onwards",
@@ -37,7 +37,4 @@ export const events = [
       m4: "Anshika Singh",
     },
   },
-
-
-
 ];

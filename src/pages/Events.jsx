@@ -111,8 +111,8 @@ transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0
               {/* Event Card */}
               {events.map((event) => (
 
-                <div onClick={() => navigate(`/events/${event.id}`)} key={event.id} className="relative group rounded-2xl
-              shadow-[0_0_30px_rgba(32,178,166,0.2)] sm:shadow-none overflow-hidden border border-primary/40 sm:border-white/10 hover:border-primary/40 h-96 hover:-translate-y-2 transition-all duration-300 hover:shadow-[0_0_30px_rgba(32,178,166,0.2)] cursor-pointer z-10 flex items-center justify-center bg-primary/10 backdrop-blur-md sm:backdrop-blur-xs">
+                <div key={event.id} className="relative group rounded-2xl
+              shadow-[0_0_30px_rgba(32,178,166,0.2)] sm:shadow-none overflow-hidden border border-primary/40 sm:border-white/10 hover:border-primary/40 h-96 hover:-translate-y-2 transition-all duration-300 hover:shadow-[0_0_30px_rgba(32,178,166,0.2)] cursor-pointer z-10 flex items-center justify-center bg-primary/10 backdrop-blur-md sm:backdrop-blur-xs active:scale-105">
 
                   {/* Background Image */}
                   <img
@@ -163,9 +163,12 @@ transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0
                       {event.shortDescription}
                     </p>
 
-                <div className='flex flex-col mt-5'>
-                   <button  className="text-start text-primary transition-all duration-300 group-hover:translate-x-1 cursor-pointer underline sm:no-underline group-hover:underline z-20" >
-                      View Details →
+                <div className='flex flex-col mt-5 justify-center items-center gap-2'>
+                   <button onClick={() => navigate(`/events/${event.id}`)} className=" text-white transition-all duration-50 sm:duration-100 cursor-pointer z-20 border border-primary bg-black/35 hover:bg-primary active:bg-primary rounded-2xl w-full h-8" >
+                      Details
+                    </button>
+                    <button onClick={() => navigate(`/eventresults/${event.id}`)} className="w-full h-8 border border-primary bg-black/35 hover:bg-primary active:bg-primary rounded-2xl transition-all duration-50 sm:duration-100 cursor-pointer  z-20 " >
+                      Results
                     </button>
 
                 </div>
@@ -178,6 +181,7 @@ transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0
 
 
           </div>
+
         </section>
       </div>
     </div>

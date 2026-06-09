@@ -28,15 +28,15 @@ function EventDetails() {
       {/*overlay layer*/}
       <div className='fixed inset-0 bg-linear-to-b from-black/70 to-black/80 '></div>
 
-    <section className="relative z-10 mx-auto max-w-6xl px-4 pb-16 pt-24 sm:px-6">
+      <section className="relative z-10 mx-auto max-w-6xl px-4 pb-16 pt-24 sm:px-6">
 
-    {/* hero section */}
+        {/* hero section */}
 
-    <div className='flex flex-col items-center gap-2'>
+        <div className='flex flex-col items-center gap-2'>
           <h1
             className='text-4xl  md:text-6xl font-bold
             max-w-3xl z-3 '
-          ><span className='bg-linear-to-r from-primary to-highlight text-transparent bg-clip-text'>WEBSPRINT 2026</span></h1>
+          ><span className='bg-linear-to-r from-primary to-highlight text-transparent bg-clip-text'>{event.title}</span></h1>
           <h2 className='mx-3 max-w-xs sm:max-w-2xl text-muted-foreground'>{event.shortDescription}</h2>
           <p className='mx-3 max-w-xs sm:max-w-2xl text-muted-foreground'>
             {event.date} || {event.time} || {event.venue}
@@ -44,7 +44,7 @@ function EventDetails() {
 
         </div>
 
-      {/* contetn section */}
+        {/* contetn section */}
 
 
         <div className="flex flex-col items-center gap-8 md:flex-row md:items-start mt-15">
@@ -56,33 +56,29 @@ function EventDetails() {
 
           <div className="flex justify-center mt-2  md:hidden">
             <div className=' flex justify-center items-center rounded-full border border-primary bg-primary sm:bg-surface hover:bg-linear-to-r from-primary to-highlight text-center text-white transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 active:scale-95  w-35 h-10 text-sm mt-0 sm:mt-3 cursor-pointer'>
-            <a
-              href="https://forms.gle/vbPLPBiuhjAqGGTo7"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`${event.status === 'live' ? '' : 'hidden'} z-15`}
-            >
-              Register Now
-            </a>
-            <a
-              className={`${event.status === 'expired' ? '' : 'hidden'} `}
-              onClick={() => navigate(`/eventsresults/${event.id}`)}
-            >
-              View Results →
-            </a>
+              <a
+                href="https://forms.gle/vbPLPBiuhjAqGGTo7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${event.status === 'live' ? '' : 'hidden'} z-15`}
+              >
+                Register Now
+              </a>
+              <a
+                className={`${event.status === 'expired' ? '' : 'hidden'} `}
+                onClick={() => navigate(`/eventresults/${event.id}`)}
+              >
+                View Results →
+              </a>
 
-          </div>
+            </div>
           </div>
 
 
           <div className="w-full md:w-1/2 flex flex-col gap-5">
             <h2 className="mb-2 text-lg font-semibold">Description:</h2>
             <p className="mb-6 text-base text-muted-foreground sm:text-lg">
-              WebSprint 2026 is a one-day web development hackathon designed to
-              challenge your creativity and technical skills. Participants will
-              work in teams to build innovative web-based solutions within a
-              limited time frame. This event is a great opportunity to
-              collaborate, learn, and showcase your development skills.
+             {event.description}
             </p>
 
             <h2 className="mb-2 text-lg font-semibold">Important Details:</h2>
@@ -120,23 +116,27 @@ function EventDetails() {
 
       </section>
       <div className="fixed bottom-15 right-15 z-50 hidden md:block">
-      <div className=' flex justify-center items-center rounded-full border border-primary bg-primary sm:bg-surface hover:bg-linear-to-r from-primary to-highlight text-center text-white transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 active:scale-95  w-35 h-10 text-sm mt-0 sm:mt-3 cursor-pointer'>
-            <a
-              href="https://forms.gle/vbPLPBiuhjAqGGTo7"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`${event.status === 'live' ? '' : 'hidden'} z-15`}
-            >
-              Register Now
-            </a>
-            <a
-              className={`${event.status === 'expired' ? '' : 'hidden'} `}
-              onClick={() => navigate(`/eventsresults/${event.id}`)}
-            >
-              View Results →
-            </a>
+        <a
+          href="https://forms.gle/vbPLPBiuhjAqGGTo7"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`${event.status === 'live' ? '' : 'hidden'} z-15`}
+        >
+          <div className=' flex justify-center items-center rounded-full border border-primary bg-primary sm:bg-surface hover:bg-linear-to-r from-primary to-highlight text-center text-white transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 active:scale-95  w-35 h-10 text-sm mt-0 sm:mt-3 cursor-pointer'>
+            Register Now
 
           </div>
+        </a>
+        <a
+          className={`${event.status === 'expired' ? '' : 'hidden'} z-10`}
+          onClick={() => navigate(`/eventresults/${event.id}`)}
+        >
+          <div className=' flex justify-center items-center rounded-full border border-primary bg-primary sm:bg-surface hover:bg-linear-to-r from-primary to-highlight text-center text-white transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 active:scale-95  w-35 h-10 text-sm mt-0 sm:mt-3 cursor-pointer'>
+            View Results →
+
+          </div>
+        </a>
+
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import { events } from "../data/event";
 import GridAnimation from "../components/GridAnimation";
 import { Download } from "lucide-react";
 
-function EventsResults() {
+function EventResults() {
   const { id } = useParams();
   const event = events.find((e) => e.id === Number(id));
   if (!event) {
@@ -34,7 +34,7 @@ function EventsResults() {
           <h1
             className='text-4xl  md:text-6xl font-bold
             max-w-3xl z-3 '
-          ><span className='bg-linear-to-r from-primary to-highlight text-transparent bg-clip-text'>WEBSPRINT 2026</span></h1>
+          ><span className='bg-linear-to-r from-primary to-highlight text-transparent bg-clip-text'>{event.title}</span></h1>
           <h2 className='mx-3 max-w-xs sm:max-w-2xl text-muted-foreground'>{event.shortDescription}</h2>
           <p className='mx-3 max-w-xs sm:max-w-2xl text-muted-foreground'>
             {event.date} || {event.time} || {event.venue}
@@ -210,4 +210,4 @@ transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0
   )
 }
 
-export default EventsResults;
+export default EventResults;
