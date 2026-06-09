@@ -31,7 +31,7 @@ export default function IntroAnimation() {
             className="absolute z-20 h-32 w-32 drop-shadow-2xl will-change-transform"
             initial={{
               left: "50%",
-              top: "45%",
+              top: "35%",
               x: "-50%",
               y: "-50%",
               scale: 1,
@@ -62,7 +62,7 @@ export default function IntroAnimation() {
             }}
           />
 
-          <div className="absolute left-1/2 top-[58%] z-10 -translate-x-1/2 text-center w-90">
+          <div className="absolute left-1/2 top-[48%] z-10 -translate-x-1/2 text-center w-90">
             <TypeAnimation
               sequence={[
                 "Initializing IET Community...",
@@ -80,7 +80,7 @@ export default function IntroAnimation() {
 
           </div>
 
-          <div className="absolute left-1/2 top-[66%] z-10 w-72 -translate-x-1/2 overflow-hidden rounded-full bg-white/10 mt-3 sm:mt-0">
+          <div className="absolute left-1/2 top-[56%] z-10 w-72 -translate-x-1/2 overflow-hidden rounded-full bg-white/10 mt-3 sm:mt-0">
             <motion.div
               className="h-[3px] bg-[#20B2AA]"
               initial={{ width: "0%" }}
@@ -92,9 +92,9 @@ export default function IntroAnimation() {
             />
           </div>
 
-          <div className="absolute left-1/2 top-[70%] z-10 -translate-x-1/2 text-center">
+          <div className="absolute left-1/2 top-[60%] z-10 -translate-x-1/2 text-center">
             <p className="text-sm text-white/80">IET Students Community v1.0</p>
-            <p className="mt-1 text-xs text-gray-500 w-40 sm:w-auto">
+            <p className="mt-1 text-xs text-gray-500 w-55 sm:w-auto">
               Designed &amp; Developed by Aditya Singh & Community members.
             </p>
           </div>
