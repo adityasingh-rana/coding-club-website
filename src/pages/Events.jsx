@@ -112,66 +112,61 @@ transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0
               {events.map((event) => (
 
                 <div key={event.id} className="relative group rounded-2xl
-              shadow-[0_0_30px_rgba(32,178,166,0.2)] sm:shadow-none overflow-hidden border border-primary/40 sm:border-white/10 hover:border-primary/40 h-96 hover:-translate-y-2 transition-all duration-300 hover:shadow-[0_0_30px_rgba(32,178,166,0.2)] cursor-pointer z-10 flex items-center justify-center bg-primary/10 backdrop-blur-md sm:backdrop-blur-xs active:scale-105">
+              shadow-[0_0_30px_rgba(32,178,166,0.2)] sm:shadow-none overflow-hidden border border-primary/40 sm:border-white/10 hover:border-primary/40 h-96 hover:transform-3d duration-300  hover:shadow-[0_0_30px_rgba(32,178,166,0.2)] cursor-pointer z-10 flex items-center justify-center bg-primary/10 backdrop-blur-md sm:backdrop-blur-xs active:scale-105 hover:-translate-y-2">
 
                   {/* Background Image */}
                   <img
                     src="/images/cardBg.png"
                     alt="bg"
-                    className="absolute inset-0 w-full h-full object-contain opacity-40 group-hover:opacity-60 transition duration-300"
+                    className="absolute inset-0 w-full h-full object-contain opacity-40 group-hover:opacity-60 transition duration-300 "
                   />
 
                   <div
                     className="group p-6 ml-6 rounded-xl z-10 w-full max-w-sm h-auto"
                   >
+                    <div className='h-38 w-48 border-4  border-primary rounded-2xl overflow-hidden'>
+                      <img src={event.thumbnail} alt="event image" className='h-47 w-50 object-cover group-hover:scale-3d transition-transform duration-300 rounded-xl scale-105 group-hover:scale-115 ' />
+                    </div>
 
-                    <p className="text-sm text-muted-foreground mb-2">
-                      📅 {event.date}
-                    </p>
 
-                    <h3 className="text-white text-xl font-semibold mb-3">
+                    <h3 className="text-white text-center mt-3 text-sm font-semibold ">
                       {event.title}
                     </h3>
 
-                    <div className="flex">
-                        <span className="flex justify-center items-center text-xs px-3 py-1 rounded-full bg-purple-500/20 text-purple-400">
-                      {event.type}
-                    </span>&nbsp;
-                    <div className={`${event.status === "live"? "": "hidden"}`}>
-                      <span className="text-xs px-3 py-1 rounded-full bg-green-500/20 text-green-400">
-                        <span className="relative inline-flex size-3">
-                          <span className="absolute inline-flex h-2 w-2 animate-ping rounded-full bg-green-400 opacity-75"></span>
-                          <span className="relative inline-flex size-2 rounded-full bg-green-500"></span>
+                    <div className="flex mt-2 justify-center">
+                      <span className="flex justify-center items-center text-xs px-3 rounded-full bg-purple-500/20 text-purple-400">
+                        {event.type}
+                      </span>&nbsp;
+                      <div className={`${event.status === "live" ? "" : "hidden"}`}>
+                        <span className="text-xs px-3 rounded-full bg-green-500/20 text-green-400">
+                          <span className="relative inline-flex size-3">
+                            <span className="absolute inline-flex h-2 w-2 animate-ping rounded-full bg-green-400 opacity-75"></span>
+                            <span className="relative inline-flex size-2 rounded-full bg-green-500"></span>
+                          </span>
+                          <span className='ml-0.5'>
+                            {event.status}
+                          </span>
                         </span>
-                        <span className='ml-0.5'>
-                          {event.status}
-                        </span>
-                      </span>
                       </div>
-                      <div className={`${event.status === "expired"? "": "hidden"}`}>
+                      <div className={`${event.status === "expired" ? "" : "hidden"}`}>
                         <div className=''>
                           <img
-                            src= "/icons/expired.png"
+                            src="/icons/expired.png"
                             className='h-7 w-8 ml-2'
                           ></img>
                         </div>
                       </div>
                     </div>
 
+                    <div className='flex flex-col mt-2 justify-center items-center gap-2'>
+                      <button onClick={() => navigate(`/events/${event.id}`)} className=" text-white transition-all duration-50 sm:duration-100 cursor-pointer z-20 border border-primary bg-black/35 hover:bg-primary active:bg-primary rounded-2xl w-full h-8" >
+                        Details
+                      </button>
+                      <button onClick={() => navigate(`/eventresults/${event.id}`)} className="w-full h-8 border border-primary bg-black/35 hover:bg-primary active:bg-primary rounded-2xl transition-all duration-50 sm:duration-100 cursor-pointer  z-20 " >
+                        Results
+                      </button>
 
-                    <p className="text-muted-foreground mt-3">
-                      {event.shortDescription}
-                    </p>
-
-                <div className='flex flex-col mt-5 justify-center items-center gap-2'>
-                   <button onClick={() => navigate(`/events/${event.id}`)} className=" text-white transition-all duration-50 sm:duration-100 cursor-pointer z-20 border border-primary bg-black/35 hover:bg-primary active:bg-primary rounded-2xl w-full h-8" >
-                      Details
-                    </button>
-                    <button onClick={() => navigate(`/eventresults/${event.id}`)} className="w-full h-8 border border-primary bg-black/35 hover:bg-primary active:bg-primary rounded-2xl transition-all duration-50 sm:duration-100 cursor-pointer  z-20 " >
-                      Results
-                    </button>
-
-                </div>
+                    </div>
                   </div>
                 </div>
 
