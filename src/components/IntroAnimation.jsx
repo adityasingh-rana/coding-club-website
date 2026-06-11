@@ -19,7 +19,7 @@ export default function IntroAnimation() {
   return (
     <AnimatePresence>
         <motion.div
-          className="fixed inset-0 z-[9999] overflow-hidden bg-black"
+          className="fixed inset-0 z-9999 overflow-hidden bg-black"
           initial={{ opacity: 1 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -82,7 +82,7 @@ export default function IntroAnimation() {
 
           <div className="absolute left-1/2 top-[56%] z-10 w-72 -translate-x-1/2 overflow-hidden rounded-full bg-white/10 mt-3 sm:mt-0">
             <motion.div
-              className="h-[3px] bg-[#20B2AA]"
+              className="h-0.75 bg-[#20B2AA]"
               initial={{ width: "0%" }}
               animate={{ width: "100%" }}
               transition={{

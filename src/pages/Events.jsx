@@ -8,6 +8,7 @@ function Events() {
   const navigate = useNavigate();
   return (
     <div className='bg-linear-to-b from-background/90 via-black/60 to-background/90'>
+
       <div className="hidden md:block">
         <GridAnimation />
       </div>
@@ -20,85 +21,14 @@ function Events() {
       {/*overlay layer*/}
       <div className='fixed inset-0 bg-linear-to-b from-black/70 to-black/80 '></div>
       <div className='relative z-10'>
-
-
-        <section className="py-30">
-          <div className="animate-[fadeIn_1s_ease-in-out] container mx-auto px-6 text-center z-10">
-
-            <h2 className="animate-[fadeIn_1s_ease-in-out] text-4xl font-bold mb-4">
-              What <span className="text-primary">We Offer</span>
-            </h2>
-            <p className="animate-[fadeIn_1s_ease-in-out] text-muted-foreground mb-12">
-              Explore events, connect with developers, and grow your skills
-            </p>
-
-            {/* Cards */}
-            <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto ">
-              {/* Card 1 */}
-              <div className="animate-[fadeIn_0.8s_ease-in-out] p-6 rounded-xl bg-primary/10 backdrop-blur-xs border border-white/10 hover:-translate-y-3 hover:scale-[1.02]
-transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0.2)] z-10"
-              >
-
-                <div className='flex justify-center'>
-                  <Calendar className="w-8 h-8 mb-4 text-primary " />
-
-                </div>
-
-                <h3 className="text-xl font-semibold mb-2">Events</h3>
-
-                <p className="text-muted-foreground">
-                  Participate in coding contests, hackathons, and workshops
-                </p>
-
-              </div>
-
-              {/* Card 2 */}
-              <div className="z-10 animate-[fadeIn_0.8s_ease-in-out] p-6 rounded-xl bg-primary/10 backdrop-blur-xs border border-white/10 hover:-translate-y-3 hover:scale-[1.02]
-transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0.2)]">
-
-                <div className='flex justify-center'>
-                  <Users className="w-8 h-8 mb-4 text-primary " />
-
-                </div>
-
-                <h3 className="text-xl font-semibold mb-2">Community</h3>
-
-                <p className="text-muted-foreground">
-                  Connect with like-minded developers and grow together
-                </p>
-
-              </div>
-
-              {/* Card 3 */}
-
-              <div className="animate-[fadeIn_0.8s_ease-in-out] p-6 rounded-xl bg-primary/10 backdrop-blur-xs border border-white/10 hover:-translate-y-3 hover:scale-[1.02]
-transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0.2)] z-10">
-
-                <div className='flex justify-center'>
-
-                  <BookOpen className="w-8 h-8 mb-4 text-primary " />
-                </div>
-
-                <h3 className="text-xl font-semibold mb-2">Learning</h3>
-                <p className="text-muted-foreground">
-                  Access resources, mentorship, and real-world projects
-                </p>
-
-              </div>
-            </div>
-
-          </div>
-        </section>
-
-
-        <section className="events-sec pb-24">
+        <section className="events-sec py-35 pb-24">
           <div className="container mx-auto px-6">
 
             <div className="text-center mb-12">
-              <h2 className="animate-[fadeIn_1s_ease-in-out] text-4xl font-bold">
+              <h2 className="animate-[fadeIn_1s_ease-in-out] text-5xl font-bold">
                 Upcoming <span className="text-primary">Events</span>
               </h2>
-              <p className="animate-[fadeIn_1s_ease-in-out] text-muted-foreground mt-2">
+              <p className="animate-[fadeIn_1s_ease-in-out] text-muted-foreground mt-6 text-2xl">
                 Join exciting events and level up your skills
               </p>
             </div>
@@ -138,7 +68,7 @@ transition-all duration-300 ease-in-out hover:shadow-[0_0_30px_rgba(32,178,166,0
                         {event.type}
                       </span>&nbsp;
                       <div className={`${event.status === "live" ? "" : "hidden"}`}>
-                        <span className="text-xs px-3 rounded-full bg-green-500/20 text-green-400">
+                        <span className="text-xs px-3 py-0.75 rounded-full bg-green-500/20 text-green-400">
                           <span className="relative inline-flex size-3">
                             <span className="absolute inline-flex h-2 w-2 animate-ping rounded-full bg-green-400 opacity-75"></span>
                             <span className="relative inline-flex size-2 rounded-full bg-green-500"></span>

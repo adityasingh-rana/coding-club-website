@@ -4,6 +4,19 @@
   scrollbar-width: none;
 }
 
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin-slow {
+  animation: spin-slow 4s linear infinite;
+}
+
 @theme {
   --color-background: #0f1418;
   --color-foreground: #f0f2f5;
