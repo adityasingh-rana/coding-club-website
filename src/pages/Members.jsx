@@ -68,6 +68,9 @@ function Members() {
                       alt="bg"
                       className="absolute inset-0 w-full h-full opacity-90 sm:opacity-70 group-hover:opacity-90 object-contain transition duration-300"
                     />
+                    <div className="absolute top-6 left-15 sm:left-20 sm:top-10 border-2 border-primary rounded-full overflow-hidden h-30 sm:h-32 w-30 sm:w-32">
+                    <img src={member.profileImg}  />
+                    </div>
                     <div className="flex flex-col mt-25 sm:mt-30 ml-3 items-center gap-0 sm:gap-1 z-5">
                       <h1 className='z-5 text-foreground text-xl sm:text-2xl mt-2 sm:mt-0'>{member.name} </h1>
                       <div className='text-primary'>
